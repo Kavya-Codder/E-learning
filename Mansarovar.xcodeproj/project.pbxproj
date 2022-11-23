@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		076A89D1292E60A10079B2B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89D0292E60A10079B2B2 /* AppDelegate.swift */; };
+		076A89D3292E60A10079B2B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89D2292E60A10079B2B2 /* SceneDelegate.swift */; };
+		076A89D5292E60A10079B2B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89D4292E60A10079B2B2 /* ViewController.swift */; };
+		076A89D8292E60A10079B2B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076A89D6292E60A10079B2B2 /* Main.storyboard */; };
+		076A89DA292E60A30079B2B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076A89D9292E60A30079B2B2 /* Assets.xcassets */; };
+		076A89DD292E60A30079B2B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076A89DB292E60A30079B2B2 /* LaunchScreen.storyboard */; };
+		076A89E8292E60A30079B2B2 /* MansarovarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89E7292E60A30079B2B2 /* MansarovarTests.swift */; };
+		076A89F3292E60A30079B2B2 /* MansarovarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89F2292E60A30079B2B2 /* MansarovarUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		076A89E4292E60A30079B2B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 076A89C5292E60A10079B2B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 076A89CC292E60A10079B2B2;
+			remoteInfo = Mansarovar;
+		};
+		076A89EF292E60A30079B2B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 076A89C5292E60A10079B2B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 076A89CC292E60A10079B2B2;
+			remoteInfo = Mansarovar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		076A89CD292E60A10079B2B2 /* Mansarovar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mansarovar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		076A89D0292E60A10079B2B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		076A89D2292E60A10079B2B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		076A89D4292E60A10079B2B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		076A89D7292E60A10079B2B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		076A89D9292E60A30079B2B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		076A89DC292E60A30079B2B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		076A89DE292E60A30079B2B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		076A89E3292E60A30079B2B2 /* MansarovarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MansarovarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		076A89E7292E60A30079B2B2 /* MansarovarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MansarovarTests.swift; sourceTree = "<group>"; };
+		076A89E9292E60A30079B2B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		076A89EE292E60A30079B2B2 /* MansarovarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MansarovarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		076A89F2292E60A30079B2B2 /* MansarovarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MansarovarUITests.swift; sourceTree = "<group>"; };
+		076A89F4292E60A30079B2B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		076A89CA292E60A10079B2B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076A89E0292E60A30079B2B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076A89EB292E60A30079B2B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		076A89C4292E60A10079B2B2 = {
+			isa = PBXGroup;
+			children = (
+				076A89CF292E60A10079B2B2 /* Mansarovar */,
+				076A89E6292E60A30079B2B2 /* MansarovarTests */,
+				076A89F1292E60A30079B2B2 /* MansarovarUITests */,
+				076A89CE292E60A10079B2B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		076A89CE292E60A10079B2B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				076A89CD292E60A10079B2B2 /* Mansarovar.app */,
+				076A89E3292E60A30079B2B2 /* MansarovarTests.xctest */,
+				076A89EE292E60A30079B2B2 /* MansarovarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		076A89CF292E60A10079B2B2 /* Mansarovar */ = {
+			isa = PBXGroup;
+			children = (
+				076A89D0292E60A10079B2B2 /* AppDelegate.swift */,
+				076A89D2292E60A10079B2B2 /* SceneDelegate.swift */,
+				076A89D4292E60A10079B2B2 /* ViewController.swift */,
+				076A89D6292E60A10079B2B2 /* Main.storyboard */,
+				076A89D9292E60A30079B2B2 /* Assets.xcassets */,
+				076A89DB292E60A30079B2B2 /* LaunchScreen.storyboard */,
+				076A89DE292E60A30079B2B2 /* Info.plist */,
+			);
+			path = Mansarovar;
+			sourceTree = "<group>";
+		};
+		076A89E6292E60A30079B2B2 /* MansarovarTests */ = {
+			isa = PBXGroup;
+			children = (
+				076A89E7292E60A30079B2B2 /* MansarovarTests.swift */,
+				076A89E9292E60A30079B2B2 /* Info.plist */,
+			);
+			path = MansarovarTests;
+			sourceTree = "<group>";
+		};
+		076A89F1292E60A30079B2B2 /* MansarovarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				076A89F2292E60A30079B2B2 /* MansarovarUITests.swift */,
+				076A89F4292E60A30079B2B2 /* Info.plist */,
+			);
+			path = MansarovarUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		076A89CC292E60A10079B2B2 /* Mansarovar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 076A89F7292E60A30079B2B2 /* Build configuration list for PBXNativeTarget "Mansarovar" */;
+			buildPhases = (
+				076A89C9292E60A10079B2B2 /* Sources */,
+				076A89CA292E60A10079B2B2 /* Frameworks */,
+				076A89CB292E60A10079B2B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mansarovar;
+			productName = Mansarovar;
+			productReference = 076A89CD292E60A10079B2B2 /* Mansarovar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		076A89E2292E60A30079B2B2 /* MansarovarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 076A89FA292E60A30079B2B2 /* Build configuration list for PBXNativeTarget "MansarovarTests" */;
+			buildPhases = (
+				076A89DF292E60A30079B2B2 /* Sources */,
+				076A89E0292E60A30079B2B2 /* Frameworks */,
+				076A89E1292E60A30079B2B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				076A89E5292E60A30079B2B2 /* PBXTargetDependency */,
+			);
+			name = MansarovarTests;
+			productName = MansarovarTests;
+			productReference = 076A89E3292E60A30079B2B2 /* MansarovarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		076A89ED292E60A30079B2B2 /* MansarovarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 076A89FD292E60A30079B2B2 /* Build configuration list for PBXNativeTarget "MansarovarUITests" */;
+			buildPhases = (
+				076A89EA292E60A30079B2B2 /* Sources */,
+				076A89EB292E60A30079B2B2 /* Frameworks */,
+				076A89EC292E60A30079B2B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				076A89F0292E60A30079B2B2 /* PBXTargetDependency */,
+			);
+			name = MansarovarUITests;
+			productName = MansarovarUITests;
+			productReference = 076A89EE292E60A30079B2B2 /* MansarovarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		076A89C5292E60A10079B2B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					076A89CC292E60A10079B2B2 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					076A89E2292E60A30079B2B2 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 076A89CC292E60A10079B2B2;
+					};
+					076A89ED292E60A30079B2B2 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 076A89CC292E60A10079B2B2;
+					};
+				};
+			};
+			buildConfigurationList = 076A89C8292E60A10079B2B2 /* Build configuration list for PBXProject "Mansarovar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 076A89C4292E60A10079B2B2;
+			productRefGroup = 076A89CE292E60A10079B2B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				076A89CC292E60A10079B2B2 /* Mansarovar */,
+				076A89E2292E60A30079B2B2 /* MansarovarTests */,
+				076A89ED292E60A30079B2B2 /* MansarovarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		076A89CB292E60A10079B2B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076A89DD292E60A30079B2B2 /* LaunchScreen.storyboard in Resources */,
+				076A89DA292E60A30079B2B2 /* Assets.xcassets in Resources */,
+				076A89D8292E60A10079B2B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076A89E1292E60A30079B2B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076A89EC292E60A30079B2B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		076A89C9292E60A10079B2B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076A89D5292E60A10079B2B2 /* ViewController.swift in Sources */,
+				076A89D1292E60A10079B2B2 /* AppDelegate.swift in Sources */,
+				076A89D3292E60A10079B2B2 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076A89DF292E60A30079B2B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076A89E8292E60A30079B2B2 /* MansarovarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076A89EA292E60A30079B2B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076A89F3292E60A30079B2B2 /* MansarovarUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		076A89E5292E60A30079B2B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 076A89CC292E60A10079B2B2 /* Mansarovar */;
+			targetProxy = 076A89E4292E60A30079B2B2 /* PBXContainerItemProxy */;
+		};
+		076A89F0292E60A30079B2B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 076A89CC292E60A10079B2B2 /* Mansarovar */;
+			targetProxy = 076A89EF292E60A30079B2B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		076A89D6292E60A10079B2B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				076A89D7292E60A10079B2B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		076A89DB292E60A30079B2B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				076A89DC292E60A30079B2B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		076A89F5292E60A30079B2B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		076A89F6292E60A30079B2B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		076A89F8292E60A30079B2B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SAT68F6L25;
+				INFOPLIST_FILE = Mansarovar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Saga.DemoMapBox.Mansarovar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		076A89F9292E60A30079B2B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SAT68F6L25;
+				INFOPLIST_FILE = Mansarovar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Saga.DemoMapBox.Mansarovar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		076A89FB292E60A30079B2B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SAT68F6L25;
+				INFOPLIST_FILE = MansarovarTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Saga.DemoMapBox.MansarovarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mansarovar.app/Mansarovar";
+			};
+			name = Debug;
+		};
+		076A89FC292E60A30079B2B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SAT68F6L25;
+				INFOPLIST_FILE = MansarovarTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Saga.DemoMapBox.MansarovarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mansarovar.app/Mansarovar";
+			};
+			name = Release;
+		};
+		076A89FE292E60A30079B2B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SAT68F6L25;
+				INFOPLIST_FILE = MansarovarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Saga.DemoMapBox.MansarovarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mansarovar;
+			};
+			name = Debug;
+		};
+		076A89FF292E60A30079B2B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SAT68F6L25;
+				INFOPLIST_FILE = MansarovarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Saga.DemoMapBox.MansarovarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mansarovar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		076A89C8292E60A10079B2B2 /* Build configuration list for PBXProject "Mansarovar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076A89F5292E60A30079B2B2 /* Debug */,
+				076A89F6292E60A30079B2B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		076A89F7292E60A30079B2B2 /* Build configuration list for PBXNativeTarget "Mansarovar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076A89F8292E60A30079B2B2 /* Debug */,
+				076A89F9292E60A30079B2B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		076A89FA292E60A30079B2B2 /* Build configuration list for PBXNativeTarget "MansarovarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076A89FB292E60A30079B2B2 /* Debug */,
+				076A89FC292E60A30079B2B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		076A89FD292E60A30079B2B2 /* Build configuration list for PBXNativeTarget "MansarovarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076A89FE292E60A30079B2B2 /* Debug */,
+				076A89FF292E60A30079B2B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 076A89C5292E60A10079B2B2 /* Project object */;
+}
