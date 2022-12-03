@@ -1,0 +1,6 @@
+framework module Pods_Mansarovar {
+  umbrella header "Pods-Mansarovar-umbrella.h"
+
+  export *
+  module * { export * }
+}

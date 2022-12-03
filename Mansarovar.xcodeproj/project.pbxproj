@@ -3,10 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075845CF293B08F6005565F7 /* TestSeriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075845CE293B08F6005565F7 /* TestSeriesVC.swift */; };
+		075845D5293B093C005565F7 /* TestSeriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075845D3293B093C005565F7 /* TestSeriesCell.swift */; };
+		075845D6293B093C005565F7 /* TestSeriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075845D4293B093C005565F7 /* TestSeriesCell.xib */; };
+		075845DB293B166F005565F7 /* AllTestSeriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075845DA293B166F005565F7 /* AllTestSeriesModel.swift */; };
+		075B7871293B8DC100A94C82 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075B7870293B8DC100A94C82 /* Dashboard.storyboard */; };
+		075B787C293B924B00A94C82 /* DeshboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B787B293B924B00A94C82 /* DeshboardVC.swift */; };
+		075B7884293BAEE600A94C82 /* RegisterModer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B7883293BAEE600A94C82 /* RegisterModer.swift */; };
+		075BAADC2939AFF000E698AB /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075BAADB2939AFF000E698AB /* SignUpVC.swift */; };
+		075BAAED2939B8FF00E698AB /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 075BAAE12939B8FF00E698AB /* Roboto-Bold.ttf */; };
+		075BAAEE2939B8FF00E698AB /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 075BAAE22939B8FF00E698AB /* Roboto-BlackItalic.ttf */; };
+		075BAAEF2939B8FF00E698AB /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 075BAAE32939B8FF00E698AB /* Roboto-Black.ttf */; };
+		075BAAF02939B8FF00E698AB /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 075BAAE42939B8FF00E698AB /* Roboto-MediumItalic.ttf */; };
+		075BAAF12939B8FF00E698AB /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 075BAAE52939B8FF00E698AB /* Roboto-Thin.ttf */; };
+		075BAAF22939B8FF00E698AB /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 075BAAE62939B8FF00E698AB /* Roboto-ThinItalic.ttf */; };
+		075BAAF32939B8FF00E698AB /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 075BAAE72939B8FF00E698AB /* Roboto-LightItalic.ttf */; };
+		075BAAF42939B8FF00E698AB /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 075BAAE82939B8FF00E698AB /* Roboto-Medium.ttf */; };
+		075BAAF52939B8FF00E698AB /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 075BAAE92939B8FF00E698AB /* Roboto-Light.ttf */; };
+		075BAAF62939B8FF00E698AB /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 075BAAEA2939B8FF00E698AB /* Roboto-BoldItalic.ttf */; };
+		075BAAF72939B8FF00E698AB /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 075BAAEB2939B8FF00E698AB /* Roboto-Regular.ttf */; };
+		075BAAF82939B8FF00E698AB /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 075BAAEC2939B8FF00E698AB /* Roboto-Italic.ttf */; };
+		075BAAFD2939D71700E698AB /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075BAAFC2939D71700E698AB /* ForgotPasswordVC.swift */; };
+		075BAB032939DCA900E698AB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075BAB022939DCA900E698AB /* Extension.swift */; };
+		075DDC96293A2106003442FE /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DDC95293A2106003442FE /* LogIn.swift */; };
 		076A89D1292E60A10079B2B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89D0292E60A10079B2B2 /* AppDelegate.swift */; };
 		076A89D3292E60A10079B2B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89D2292E60A10079B2B2 /* SceneDelegate.swift */; };
 		076A89D5292E60A10079B2B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89D4292E60A10079B2B2 /* ViewController.swift */; };
@@ -15,8 +38,11 @@
 		076A89E8292E60A30079B2B2 /* MansarovarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89E7292E60A30079B2B2 /* MansarovarTests.swift */; };
 		076A89F3292E60A30079B2B2 /* MansarovarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89F2292E60A30079B2B2 /* MansarovarUITests.swift */; };
 		076A8A07292E60BB0079B2B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076A8A06292E60BB0079B2B2 /* Main.storyboard */; };
-		076A8A0C292E6C5E0079B2B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A8A0B292E6C5E0079B2B2 /* LoginViewController.swift */; };
+		076A8A0C292E6C5E0079B2B2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A8A0B292E6C5E0079B2B2 /* LoginVC.swift */; };
 		076A8A1D292E83190079B2B2 /* LoginSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A8A1C292E83190079B2B2 /* LoginSuccessViewController.swift */; };
+		1A26879C63E5DAF905440DE3 /* Pods_Mansarovar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46E4DDE195DC85F611F4622 /* Pods_Mansarovar.framework */; };
+		43289556568F4E27E315AFEB /* Pods_Mansarovar_MansarovarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D8015ADFC0FF551059FB90 /* Pods_Mansarovar_MansarovarUITests.framework */; };
+		F91DB3F5F3A17E6335DF2E2D /* Pods_MansarovarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58C790574E7E1440FFA5097 /* Pods_MansarovarTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +63,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		075845CE293B08F6005565F7 /* TestSeriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSeriesVC.swift; sourceTree = "<group>"; };
+		075845D3293B093C005565F7 /* TestSeriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSeriesCell.swift; sourceTree = "<group>"; };
+		075845D4293B093C005565F7 /* TestSeriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestSeriesCell.xib; sourceTree = "<group>"; };
+		075845DA293B166F005565F7 /* AllTestSeriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTestSeriesModel.swift; sourceTree = "<group>"; };
+		075B7870293B8DC100A94C82 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		075B787B293B924B00A94C82 /* DeshboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeshboardVC.swift; sourceTree = "<group>"; };
+		075B7883293BAEE600A94C82 /* RegisterModer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterModer.swift; sourceTree = "<group>"; };
+		075BAADB2939AFF000E698AB /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		075BAAE12939B8FF00E698AB /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		075BAAE22939B8FF00E698AB /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		075BAAE32939B8FF00E698AB /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		075BAAE42939B8FF00E698AB /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		075BAAE52939B8FF00E698AB /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		075BAAE62939B8FF00E698AB /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		075BAAE72939B8FF00E698AB /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		075BAAE82939B8FF00E698AB /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		075BAAE92939B8FF00E698AB /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		075BAAEA2939B8FF00E698AB /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		075BAAEB2939B8FF00E698AB /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		075BAAEC2939B8FF00E698AB /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		075BAAFC2939D71700E698AB /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		075BAB022939DCA900E698AB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		075DDC95293A2106003442FE /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		076A89CD292E60A10079B2B2 /* Mansarovar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mansarovar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		076A89D0292E60A10079B2B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		076A89D2292E60A10079B2B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,8 +100,17 @@
 		076A89F2292E60A30079B2B2 /* MansarovarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MansarovarUITests.swift; sourceTree = "<group>"; };
 		076A89F4292E60A30079B2B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		076A8A06292E60BB0079B2B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		076A8A0B292E6C5E0079B2B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		076A8A0B292E6C5E0079B2B2 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		076A8A1C292E83190079B2B2 /* LoginSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSuccessViewController.swift; sourceTree = "<group>"; };
+		1B8BA5AAFCBB1D1E3F8D5108 /* Pods-Mansarovar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mansarovar.release.xcconfig"; path = "Target Support Files/Pods-Mansarovar/Pods-Mansarovar.release.xcconfig"; sourceTree = "<group>"; };
+		24541873DE8A9DA1226C103D /* Pods-Mansarovar-MansarovarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mansarovar-MansarovarUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mansarovar-MansarovarUITests/Pods-Mansarovar-MansarovarUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		29B60F6EE4A9CA47F53F2307 /* Pods-MansarovarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MansarovarTests.release.xcconfig"; path = "Target Support Files/Pods-MansarovarTests/Pods-MansarovarTests.release.xcconfig"; sourceTree = "<group>"; };
+		74383316358AA6C4C2677E34 /* Pods-Mansarovar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mansarovar.debug.xcconfig"; path = "Target Support Files/Pods-Mansarovar/Pods-Mansarovar.debug.xcconfig"; sourceTree = "<group>"; };
+		8A9A5A6D56CEAB75FF9DCC8F /* Pods-Mansarovar-MansarovarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mansarovar-MansarovarUITests.release.xcconfig"; path = "Target Support Files/Pods-Mansarovar-MansarovarUITests/Pods-Mansarovar-MansarovarUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BEF1DC44DD4834F1B8E72E39 /* Pods-MansarovarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MansarovarTests.debug.xcconfig"; path = "Target Support Files/Pods-MansarovarTests/Pods-MansarovarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C0D8015ADFC0FF551059FB90 /* Pods_Mansarovar_MansarovarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mansarovar_MansarovarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C46E4DDE195DC85F611F4622 /* Pods_Mansarovar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mansarovar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F58C790574E7E1440FFA5097 /* Pods_MansarovarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MansarovarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A26879C63E5DAF905440DE3 /* Pods_Mansarovar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91DB3F5F3A17E6335DF2E2D /* Pods_MansarovarTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,17 +134,121 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43289556568F4E27E315AFEB /* Pods_Mansarovar_MansarovarUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07607D222939223E00086967 /* Model */ = {
+		075B784E293B43BB00A94C82 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				076A8A0B292E6C5E0079B2B2 /* LoginVC.swift */,
+				076A8A1C292E83190079B2B2 /* LoginSuccessViewController.swift */,
+				075BAADB2939AFF000E698AB /* SignUpVC.swift */,
+				075BAAFC2939D71700E698AB /* ForgotPasswordVC.swift */,
+				075845CE293B08F6005565F7 /* TestSeriesVC.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		075B786F293B8D9600A94C82 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				075B7877293B91B600A94C82 /* Model */,
+				075B7876293B91AC00A94C82 /* View */,
+				075B7875293B919B00A94C82 /* Controller */,
+				075B7870293B8DC100A94C82 /* Dashboard.storyboard */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		075B7875293B919B00A94C82 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				075B787B293B924B00A94C82 /* DeshboardVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		075B7876293B91AC00A94C82 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		075B7877293B91B600A94C82 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		075BAAD72939AF5000E698AB /* Login and SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				075BAAD82939AF8000E698AB /* Model */,
+				075BAAD92939AF8900E698AB /* view */,
+				075BAADA2939AF9200E698AB /* Controllre */,
+			);
+			path = "Login and SignUp";
+			sourceTree = "<group>";
+		};
+		075BAAD82939AF8000E698AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				075DDC95293A2106003442FE /* LogIn.swift */,
+				075845DA293B166F005565F7 /* AllTestSeriesModel.swift */,
+				075B7883293BAEE600A94C82 /* RegisterModer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		075BAAD92939AF8900E698AB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				075845D3293B093C005565F7 /* TestSeriesCell.swift */,
+				075845D4293B093C005565F7 /* TestSeriesCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		075BAADA2939AF9200E698AB /* Controllre */ = {
+			isa = PBXGroup;
+			children = (
+				075B784E293B43BB00A94C82 /* Session */,
+				076A8A06292E60BB0079B2B2 /* Main.storyboard */,
+			);
+			path = Controllre;
+			sourceTree = "<group>";
+		};
+		075BAAE02939B7BE00E698AB /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				075BAAE32939B8FF00E698AB /* Roboto-Black.ttf */,
+				075BAAE22939B8FF00E698AB /* Roboto-BlackItalic.ttf */,
+				075BAAE12939B8FF00E698AB /* Roboto-Bold.ttf */,
+				075BAAEA2939B8FF00E698AB /* Roboto-BoldItalic.ttf */,
+				075BAAEC2939B8FF00E698AB /* Roboto-Italic.ttf */,
+				075BAAE92939B8FF00E698AB /* Roboto-Light.ttf */,
+				075BAAE72939B8FF00E698AB /* Roboto-LightItalic.ttf */,
+				075BAAE82939B8FF00E698AB /* Roboto-Medium.ttf */,
+				075BAAE42939B8FF00E698AB /* Roboto-MediumItalic.ttf */,
+				075BAAEB2939B8FF00E698AB /* Roboto-Regular.ttf */,
+				075BAAE52939B8FF00E698AB /* Roboto-Thin.ttf */,
+				075BAAE62939B8FF00E698AB /* Roboto-ThinItalic.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		075BAB012939DC6500E698AB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				075BAB022939DCA900E698AB /* Extension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		076A89C4292E60A10079B2B2 = {
@@ -94,6 +258,8 @@
 				076A89E6292E60A30079B2B2 /* MansarovarTests */,
 				076A89F1292E60A30079B2B2 /* MansarovarUITests */,
 				076A89CE292E60A10079B2B2 /* Products */,
+				C58E6949E47BBED8751611AA /* Pods */,
+				09439EB7D566BFCB497FFB0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,16 +276,16 @@
 		076A89CF292E60A10079B2B2 /* Mansarovar */ = {
 			isa = PBXGroup;
 			children = (
-				07607D222939223E00086967 /* Model */,
+				075B786F293B8D9600A94C82 /* Dashboard */,
+				075BAB012939DC6500E698AB /* Helper */,
+				075BAAE02939B7BE00E698AB /* Font */,
+				075BAAD72939AF5000E698AB /* Login and SignUp */,
 				076A89D0292E60A10079B2B2 /* AppDelegate.swift */,
 				076A89D2292E60A10079B2B2 /* SceneDelegate.swift */,
 				076A89D4292E60A10079B2B2 /* ViewController.swift */,
-				076A8A06292E60BB0079B2B2 /* Main.storyboard */,
 				076A89D9292E60A30079B2B2 /* Assets.xcassets */,
 				076A89DB292E60A30079B2B2 /* LaunchScreen.storyboard */,
 				076A89DE292E60A30079B2B2 /* Info.plist */,
-				076A8A0B292E6C5E0079B2B2 /* LoginViewController.swift */,
-				076A8A1C292E83190079B2B2 /* LoginSuccessViewController.swift */,
 			);
 			path = Mansarovar;
 			sourceTree = "<group>";
@@ -142,6 +308,29 @@
 			path = MansarovarUITests;
 			sourceTree = "<group>";
 		};
+		09439EB7D566BFCB497FFB0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C46E4DDE195DC85F611F4622 /* Pods_Mansarovar.framework */,
+				C0D8015ADFC0FF551059FB90 /* Pods_Mansarovar_MansarovarUITests.framework */,
+				F58C790574E7E1440FFA5097 /* Pods_MansarovarTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C58E6949E47BBED8751611AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74383316358AA6C4C2677E34 /* Pods-Mansarovar.debug.xcconfig */,
+				1B8BA5AAFCBB1D1E3F8D5108 /* Pods-Mansarovar.release.xcconfig */,
+				24541873DE8A9DA1226C103D /* Pods-Mansarovar-MansarovarUITests.debug.xcconfig */,
+				8A9A5A6D56CEAB75FF9DCC8F /* Pods-Mansarovar-MansarovarUITests.release.xcconfig */,
+				BEF1DC44DD4834F1B8E72E39 /* Pods-MansarovarTests.debug.xcconfig */,
+				29B60F6EE4A9CA47F53F2307 /* Pods-MansarovarTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +338,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 076A89F7292E60A30079B2B2 /* Build configuration list for PBXNativeTarget "Mansarovar" */;
 			buildPhases = (
+				162BCFEA20E30D60EBAE3989 /* [CP] Check Pods Manifest.lock */,
 				076A89C9292E60A10079B2B2 /* Sources */,
 				076A89CA292E60A10079B2B2 /* Frameworks */,
 				076A89CB292E60A10079B2B2 /* Resources */,
+				D49F10D0A0346CBA00484637 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +357,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 076A89FA292E60A30079B2B2 /* Build configuration list for PBXNativeTarget "MansarovarTests" */;
 			buildPhases = (
+				ED832270D4CEE8E5F4980DFF /* [CP] Check Pods Manifest.lock */,
 				076A89DF292E60A30079B2B2 /* Sources */,
 				076A89E0292E60A30079B2B2 /* Frameworks */,
 				076A89E1292E60A30079B2B2 /* Resources */,
@@ -184,9 +376,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 076A89FD292E60A30079B2B2 /* Build configuration list for PBXNativeTarget "MansarovarUITests" */;
 			buildPhases = (
+				6236443F714AA201840E45BF /* [CP] Check Pods Manifest.lock */,
 				076A89EA292E60A30079B2B2 /* Sources */,
 				076A89EB292E60A30079B2B2 /* Frameworks */,
 				076A89EC292E60A30079B2B2 /* Resources */,
+				7DF22264E28B7F6F10296554 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,9 +439,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075BAAF12939B8FF00E698AB /* Roboto-Thin.ttf in Resources */,
+				075B7871293B8DC100A94C82 /* Dashboard.storyboard in Resources */,
 				076A8A07292E60BB0079B2B2 /* Main.storyboard in Resources */,
+				075BAAF52939B8FF00E698AB /* Roboto-Light.ttf in Resources */,
+				075BAAF32939B8FF00E698AB /* Roboto-LightItalic.ttf in Resources */,
+				075BAAF62939B8FF00E698AB /* Roboto-BoldItalic.ttf in Resources */,
 				076A89DD292E60A30079B2B2 /* LaunchScreen.storyboard in Resources */,
+				075BAAEE2939B8FF00E698AB /* Roboto-BlackItalic.ttf in Resources */,
+				075BAAF82939B8FF00E698AB /* Roboto-Italic.ttf in Resources */,
+				075BAAED2939B8FF00E698AB /* Roboto-Bold.ttf in Resources */,
+				075BAAF72939B8FF00E698AB /* Roboto-Regular.ttf in Resources */,
+				075BAAF02939B8FF00E698AB /* Roboto-MediumItalic.ttf in Resources */,
+				075BAAF22939B8FF00E698AB /* Roboto-ThinItalic.ttf in Resources */,
+				075BAAF42939B8FF00E698AB /* Roboto-Medium.ttf in Resources */,
 				076A89DA292E60A30079B2B2 /* Assets.xcassets in Resources */,
+				075845D6293B093C005565F7 /* TestSeriesCell.xib in Resources */,
+				075BAAEF2939B8FF00E698AB /* Roboto-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,16 +475,128 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		162BCFEA20E30D60EBAE3989 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mansarovar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6236443F714AA201840E45BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mansarovar-MansarovarUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DF22264E28B7F6F10296554 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mansarovar-MansarovarUITests/Pods-Mansarovar-MansarovarUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mansarovar-MansarovarUITests/Pods-Mansarovar-MansarovarUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mansarovar-MansarovarUITests/Pods-Mansarovar-MansarovarUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D49F10D0A0346CBA00484637 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mansarovar/Pods-Mansarovar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mansarovar/Pods-Mansarovar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mansarovar/Pods-Mansarovar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED832270D4CEE8E5F4980DFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MansarovarTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		076A89C9292E60A10079B2B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				076A8A0C292E6C5E0079B2B2 /* LoginViewController.swift in Sources */,
+				075845DB293B166F005565F7 /* AllTestSeriesModel.swift in Sources */,
+				076A8A0C292E6C5E0079B2B2 /* LoginVC.swift in Sources */,
+				075BAAFD2939D71700E698AB /* ForgotPasswordVC.swift in Sources */,
 				076A89D5292E60A10079B2B2 /* ViewController.swift in Sources */,
+				075845CF293B08F6005565F7 /* TestSeriesVC.swift in Sources */,
+				075B7884293BAEE600A94C82 /* RegisterModer.swift in Sources */,
 				076A8A1D292E83190079B2B2 /* LoginSuccessViewController.swift in Sources */,
 				076A89D1292E60A10079B2B2 /* AppDelegate.swift in Sources */,
+				075BAB032939DCA900E698AB /* Extension.swift in Sources */,
+				075B787C293B924B00A94C82 /* DeshboardVC.swift in Sources */,
+				075BAADC2939AFF000E698AB /* SignUpVC.swift in Sources */,
+				075DDC96293A2106003442FE /* LogIn.swift in Sources */,
 				076A89D3292E60A10079B2B2 /* SceneDelegate.swift in Sources */,
+				075845D5293B093C005565F7 /* TestSeriesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +761,7 @@
 		};
 		076A89F8292E60A30079B2B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74383316358AA6C4C2677E34 /* Pods-Mansarovar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -460,6 +781,7 @@
 		};
 		076A89F9292E60A30079B2B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B8BA5AAFCBB1D1E3F8D5108 /* Pods-Mansarovar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -479,6 +801,7 @@
 		};
 		076A89FB292E60A30079B2B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEF1DC44DD4834F1B8E72E39 /* Pods-MansarovarTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -501,6 +824,7 @@
 		};
 		076A89FC292E60A30079B2B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29B60F6EE4A9CA47F53F2307 /* Pods-MansarovarTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -523,6 +847,7 @@
 		};
 		076A89FE292E60A30079B2B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24541873DE8A9DA1226C103D /* Pods-Mansarovar-MansarovarUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,6 +868,7 @@
 		};
 		076A89FF292E60A30079B2B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A9A5A6D56CEAB75FF9DCC8F /* Pods-Mansarovar-MansarovarUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
