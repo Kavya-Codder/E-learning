@@ -12,7 +12,10 @@ enum SignUpValidation: String {
     case email = "Please enter email"
     case password = "Please enter password"
     case con_Password = "Please conferm password"
-    case phone = "Please entet vaide phone"
+    case passwordMatch = "Password does not match"
+    case phone = "Please entet phone no."
+    case phonev1 = "Mobile number should be greater than or equal to 10 digits"
+    case phonev2 = "Please entet vaide phone no"
 }
 
 class SignUpVC: UIViewController {
@@ -71,15 +74,17 @@ class SignUpVC: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    
+}
+//MARK:- Custom FUnction
+extension SignUpVC {
+    
     func initialSetUp() {
         btnSignUP.layer.cornerRadius = 20
         btnSignUP.clipsToBounds = true
         
        
     }
-}
-//MARK:- Custom FUnction
-extension SignUpVC {
     
     func doValidation() -> (Bool, String) {
         if (txtName.text?.isEmpty ?? false) {
@@ -95,8 +100,17 @@ extension SignUpVC {
         } else if (txtConPassword.text?.isEmpty ?? false) {
             return(false, SignUpValidation.con_Password.rawValue)
             
-        } else if (txtPhone.text?.isEmpty ?? false) {
+        } else if (txtConPassword.text != txtPassword.text) {
+            return(false, SignUpValidation.passwordMatch.rawValue)
+
+        }else if (txtPhone.text?.isEmpty ?? false) {
             return(false, SignUpValidation.phone.rawValue)
+            
+        } else if (txtPhone.text?.count ?? 0 < 9) {
+            return(false, SignUpValidation.phonev1.rawValue)
+            
+        } else if (txtPhone.text?.count ?? 0 > 10) {
+            return(false, SignUpValidation.phonev2.rawValue)
             
         }
         else if !self.isValidEmailAddress(txtEmail.text ?? "") {
@@ -107,21 +121,40 @@ extension SignUpVC {
     }
     
     func signUp() {
+        self.startAnimation()
         let apiNmae = "https://eteachnow.com/mobile/app/user/register"
         guard let url = URL(string: apiNmae) else {
             return
         }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        let param = ["instid": 31,"name": txtName.text, "email": txtEmail.text,"deviceId": "12112kkj", "password": txtPassword.text, "con_password": txtConPassword.text,"phone": txtPhone.text ] as [String : Any]
+        let param = ["instid": 31,"name": txtName.text ?? "", "email": txtEmail.text ?? "","deviceId": "12112kkj", "password": txtPassword.text ?? "", "password_again": txtConPassword.text ?? "","phone": txtPhone.text ?? ""] as [String : Any]
+        print(param)
         request.addValue("application/json", forHTTPHeaderField: "content-type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: [])
         URLSession.shared.dataTask(with: request) { (data, response, error) in
+            self.stopAnimating()
 
             do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed) as! Dictionary<String, Any>
-
+               print(json)
+               let obj = LoginModel(response: json)
+                if obj.status ?? "" == "200" {
+                    
+                    DispatchQueue.main.async {
+                        self.displayAlert(with: "Success", message: "You have been registered successfully", buttons: ["ok"]) { (str) in
+                            self.navigationController?.popToRootViewController(animated: true)
+                    }
+                    }
+                    
+                } else {
+                    DispatchQueue.main.async {
+                        self.displayAlert(with: "Error", message: obj.msg, buttons: ["ok"]) { (str) in
+                            
+                        }
+                    }
+                }
                 print(json)
 
             }catch {

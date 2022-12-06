@@ -29,7 +29,20 @@
 		075BAAF82939B8FF00E698AB /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 075BAAEC2939B8FF00E698AB /* Roboto-Italic.ttf */; };
 		075BAAFD2939D71700E698AB /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075BAAFC2939D71700E698AB /* ForgotPasswordVC.swift */; };
 		075BAB032939DCA900E698AB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075BAB022939DCA900E698AB /* Extension.swift */; };
+		075C83D1293EECED008EE45D /* SubjectsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075C83D0293EECED008EE45D /* SubjectsModel.swift */; };
+		075C83E7293EFCE3008EE45D /* UpdateExamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075C83E6293EFCE3008EE45D /* UpdateExamModel.swift */; };
+		075D2837293DBF99007D4A46 /* SliderImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D2835293DBF99007D4A46 /* SliderImagesCell.swift */; };
+		075D2838293DBF99007D4A46 /* SliderImagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075D2836293DBF99007D4A46 /* SliderImagesCell.xib */; };
+		075D2845293DED65007D4A46 /* LeftMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D2844293DED65007D4A46 /* LeftMenu.swift */; };
+		075D9664293CB242007DAC82 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D9663293CB242007DAC82 /* Constant.swift */; };
+		075D96A0293CCE5A007DAC82 /* ForgotPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D969F293CCE5A007DAC82 /* ForgotPasswordModel.swift */; };
 		075DDC96293A2106003442FE /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DDC95293A2106003442FE /* LogIn.swift */; };
+		076296E9293E019F00316445 /* SupportingFiles in Resources */ = {isa = PBXBuildFile; fileRef = 076296E8293E019F00316445 /* SupportingFiles */; };
+		076296F4293E0A0600316445 /* SelectClass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076296F3293E0A0600316445 /* SelectClass.storyboard */; };
+		076296FC293E0D5100316445 /* SelectClassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076296FB293E0D5100316445 /* SelectClassVC.swift */; };
+		07629705293E0DB100316445 /* SelectClassTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07629703293E0DB100316445 /* SelectClassTVC.swift */; };
+		07629706293E0DB100316445 /* SelectClassTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07629704293E0DB100316445 /* SelectClassTVC.xib */; };
+		0762970B293E12EB00316445 /* ExamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762970A293E12EB00316445 /* ExamModel.swift */; };
 		076A89D1292E60A10079B2B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89D0292E60A10079B2B2 /* AppDelegate.swift */; };
 		076A89D3292E60A10079B2B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89D2292E60A10079B2B2 /* SceneDelegate.swift */; };
 		076A89D5292E60A10079B2B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89D4292E60A10079B2B2 /* ViewController.swift */; };
@@ -85,7 +98,20 @@
 		075BAAEC2939B8FF00E698AB /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		075BAAFC2939D71700E698AB /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		075BAB022939DCA900E698AB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		075C83D0293EECED008EE45D /* SubjectsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsModel.swift; sourceTree = "<group>"; };
+		075C83E6293EFCE3008EE45D /* UpdateExamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateExamModel.swift; sourceTree = "<group>"; };
+		075D2835293DBF99007D4A46 /* SliderImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderImagesCell.swift; sourceTree = "<group>"; };
+		075D2836293DBF99007D4A46 /* SliderImagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderImagesCell.xib; sourceTree = "<group>"; };
+		075D2844293DED65007D4A46 /* LeftMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenu.swift; sourceTree = "<group>"; };
+		075D9663293CB242007DAC82 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		075D969F293CCE5A007DAC82 /* ForgotPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordModel.swift; sourceTree = "<group>"; };
 		075DDC95293A2106003442FE /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
+		076296E8293E019F00316445 /* SupportingFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SupportingFiles; sourceTree = "<group>"; };
+		076296F3293E0A0600316445 /* SelectClass.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectClass.storyboard; sourceTree = "<group>"; };
+		076296FB293E0D5100316445 /* SelectClassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectClassVC.swift; sourceTree = "<group>"; };
+		07629703293E0DB100316445 /* SelectClassTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectClassTVC.swift; sourceTree = "<group>"; };
+		07629704293E0DB100316445 /* SelectClassTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectClassTVC.xib; sourceTree = "<group>"; };
+		0762970A293E12EB00316445 /* ExamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamModel.swift; sourceTree = "<group>"; };
 		076A89CD292E60A10079B2B2 /* Mansarovar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mansarovar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		076A89D0292E60A10079B2B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		076A89D2292E60A10079B2B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +186,7 @@
 				075B7876293B91AC00A94C82 /* View */,
 				075B7875293B919B00A94C82 /* Controller */,
 				075B7870293B8DC100A94C82 /* Dashboard.storyboard */,
+				075D2844293DED65007D4A46 /* LeftMenu.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -175,6 +202,8 @@
 		075B7876293B91AC00A94C82 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				075D2835293DBF99007D4A46 /* SliderImagesCell.swift */,
+				075D2836293DBF99007D4A46 /* SliderImagesCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +211,8 @@
 		075B7877293B91B600A94C82 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0762970A293E12EB00316445 /* ExamModel.swift */,
+				075C83D0293EECED008EE45D /* SubjectsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +233,7 @@
 				075DDC95293A2106003442FE /* LogIn.swift */,
 				075845DA293B166F005565F7 /* AllTestSeriesModel.swift */,
 				075B7883293BAEE600A94C82 /* RegisterModer.swift */,
+				075D969F293CCE5A007DAC82 /* ForgotPasswordModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -251,6 +283,50 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		075D9662293CB220007DAC82 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				075D9663293CB242007DAC82 /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		076296F2293E09E600316445 /* SelectClass */ = {
+			isa = PBXGroup;
+			children = (
+				076296FA293E0D2F00316445 /* Controller */,
+				076296F9293E0D1700316445 /* View */,
+				076296F8293E0D0C00316445 /* Model */,
+				076296F3293E0A0600316445 /* SelectClass.storyboard */,
+			);
+			path = SelectClass;
+			sourceTree = "<group>";
+		};
+		076296F8293E0D0C00316445 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				075C83E6293EFCE3008EE45D /* UpdateExamModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		076296F9293E0D1700316445 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07629703293E0DB100316445 /* SelectClassTVC.swift */,
+				07629704293E0DB100316445 /* SelectClassTVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		076296FA293E0D2F00316445 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				076296FB293E0D5100316445 /* SelectClassVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		076A89C4292E60A10079B2B2 = {
 			isa = PBXGroup;
 			children = (
@@ -276,15 +352,18 @@
 		076A89CF292E60A10079B2B2 /* Mansarovar */ = {
 			isa = PBXGroup;
 			children = (
+				076296F2293E09E600316445 /* SelectClass */,
+				076296E8293E019F00316445 /* SupportingFiles */,
+				075D9662293CB220007DAC82 /* Constant */,
 				075B786F293B8D9600A94C82 /* Dashboard */,
 				075BAB012939DC6500E698AB /* Helper */,
-				075BAAE02939B7BE00E698AB /* Font */,
 				075BAAD72939AF5000E698AB /* Login and SignUp */,
 				076A89D0292E60A10079B2B2 /* AppDelegate.swift */,
 				076A89D2292E60A10079B2B2 /* SceneDelegate.swift */,
 				076A89D4292E60A10079B2B2 /* ViewController.swift */,
 				076A89D9292E60A30079B2B2 /* Assets.xcassets */,
 				076A89DB292E60A30079B2B2 /* LaunchScreen.storyboard */,
+				075BAAE02939B7BE00E698AB /* Font */,
 				076A89DE292E60A30079B2B2 /* Info.plist */,
 			);
 			path = Mansarovar;
@@ -403,6 +482,7 @@
 				TargetAttributes = {
 					076A89CC292E60A10079B2B2 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					076A89E2292E60A30079B2B2 = {
 						CreatedOnToolsVersion = 12.4;
@@ -441,14 +521,18 @@
 			files = (
 				075BAAF12939B8FF00E698AB /* Roboto-Thin.ttf in Resources */,
 				075B7871293B8DC100A94C82 /* Dashboard.storyboard in Resources */,
+				075D2838293DBF99007D4A46 /* SliderImagesCell.xib in Resources */,
 				076A8A07292E60BB0079B2B2 /* Main.storyboard in Resources */,
 				075BAAF52939B8FF00E698AB /* Roboto-Light.ttf in Resources */,
 				075BAAF32939B8FF00E698AB /* Roboto-LightItalic.ttf in Resources */,
+				076296E9293E019F00316445 /* SupportingFiles in Resources */,
 				075BAAF62939B8FF00E698AB /* Roboto-BoldItalic.ttf in Resources */,
 				076A89DD292E60A30079B2B2 /* LaunchScreen.storyboard in Resources */,
 				075BAAEE2939B8FF00E698AB /* Roboto-BlackItalic.ttf in Resources */,
 				075BAAF82939B8FF00E698AB /* Roboto-Italic.ttf in Resources */,
+				076296F4293E0A0600316445 /* SelectClass.storyboard in Resources */,
 				075BAAED2939B8FF00E698AB /* Roboto-Bold.ttf in Resources */,
+				07629706293E0DB100316445 /* SelectClassTVC.xib in Resources */,
 				075BAAF72939B8FF00E698AB /* Roboto-Regular.ttf in Resources */,
 				075BAAF02939B8FF00E698AB /* Roboto-MediumItalic.ttf in Resources */,
 				075BAAF22939B8FF00E698AB /* Roboto-ThinItalic.ttf in Resources */,
@@ -583,20 +667,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0762970B293E12EB00316445 /* ExamModel.swift in Sources */,
+				076296FC293E0D5100316445 /* SelectClassVC.swift in Sources */,
 				075845DB293B166F005565F7 /* AllTestSeriesModel.swift in Sources */,
 				076A8A0C292E6C5E0079B2B2 /* LoginVC.swift in Sources */,
+				075D9664293CB242007DAC82 /* Constant.swift in Sources */,
 				075BAAFD2939D71700E698AB /* ForgotPasswordVC.swift in Sources */,
 				076A89D5292E60A10079B2B2 /* ViewController.swift in Sources */,
+				07629705293E0DB100316445 /* SelectClassTVC.swift in Sources */,
+				075D2837293DBF99007D4A46 /* SliderImagesCell.swift in Sources */,
 				075845CF293B08F6005565F7 /* TestSeriesVC.swift in Sources */,
 				075B7884293BAEE600A94C82 /* RegisterModer.swift in Sources */,
 				076A8A1D292E83190079B2B2 /* LoginSuccessViewController.swift in Sources */,
 				076A89D1292E60A10079B2B2 /* AppDelegate.swift in Sources */,
+				075D96A0293CCE5A007DAC82 /* ForgotPasswordModel.swift in Sources */,
+				075C83D1293EECED008EE45D /* SubjectsModel.swift in Sources */,
 				075BAB032939DCA900E698AB /* Extension.swift in Sources */,
 				075B787C293B924B00A94C82 /* DeshboardVC.swift in Sources */,
+				075C83E7293EFCE3008EE45D /* UpdateExamModel.swift in Sources */,
 				075BAADC2939AFF000E698AB /* SignUpVC.swift in Sources */,
 				075DDC96293A2106003442FE /* LogIn.swift in Sources */,
 				076A89D3292E60A10079B2B2 /* SceneDelegate.swift in Sources */,
 				075845D5293B093C005565F7 /* TestSeriesCell.swift in Sources */,
+				075D2845293DED65007D4A46 /* LeftMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,6 +858,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SAT68F6L25;
 				INFOPLIST_FILE = Mansarovar/Info.plist;
@@ -774,6 +868,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Saga.DemoMapBox.Mansarovar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mansarovar/SupportingFiles/Mansarovar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -785,6 +881,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SAT68F6L25;
 				INFOPLIST_FILE = Mansarovar/Info.plist;
@@ -794,6 +891,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Saga.DemoMapBox.Mansarovar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mansarovar/SupportingFiles/Mansarovar-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

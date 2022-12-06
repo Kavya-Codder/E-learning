@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Alamofire
+
 
 enum LoginVCValidation: String {
     case email = "Please enter email"
@@ -44,6 +44,7 @@ class LoginVC: UIViewController {
         
         let validation = doValidation()
         if validation.0 {
+            
             signIn()
         }else {
             showAlert(title: "Erroe", message: validation.1, hendler: nil)
@@ -106,35 +107,44 @@ extension LoginVC {
     //MARK:- Api call
 
     func signIn() {
+        self.startAnimation()
         let apiNmae = "https://eteachnow.com/mobile/app/user/login"
         guard let url = URL(string: apiNmae) else {
             return
         }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        let param = ["instid": 31, "email": txtEmail.text, "password": txtPassword.text] as [String : Any]
+        let param = ["instid": 31, "email": txtEmail.text ?? "", "password": txtPassword.text ?? ""] as [String : Any]
         request.addValue("application/json", forHTTPHeaderField: "content-type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: [])
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
-            if error == nil{
-        
-                    do {
-                        let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed) as! Dictionary<String, Any>
+            self.stopAnimating()
+              do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed) as! Dictionary<String, Any>
+                
+                let obj = LoginModel(response: json)
+                if obj.status == "200" {
                     
-                        print(json)
-                        DispatchQueue.main.async {
+                    DispatchQueue.main.async {
+                        self.displayAlert(with: "Success", message: "Login Successfully", buttons: ["ok"]) { (str) in
                             self.pushToDeshboardVC()
                         }
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.displayAlert(with: "Error", message: obj.msg, buttons: ["ok"]) { (str) in
+                            
+                        }
+                    }
+                }
                     
+                        print(json)
+                        
                     }catch {
                     
                     }
                     
-            } else {
-                print(error?.localizedDescription)
-            }
             
         }.resume()
     }
