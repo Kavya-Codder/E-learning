@@ -82,7 +82,7 @@ extension LoginVC {
     }
     
     func pushToDeshboardVC() {
-        let vc = UIStoryboard(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "DeshboardVC") as! DeshboardVC
+        let vc = UIStoryboard(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "tabBar") as! UITabBarController
         navigationController?.pushViewController(vc, animated: true)
     }
     

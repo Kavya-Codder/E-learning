@@ -43,6 +43,10 @@
 		07629705293E0DB100316445 /* SelectClassTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07629703293E0DB100316445 /* SelectClassTVC.swift */; };
 		07629706293E0DB100316445 /* SelectClassTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07629704293E0DB100316445 /* SelectClassTVC.xib */; };
 		0762970B293E12EB00316445 /* ExamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762970A293E12EB00316445 /* ExamModel.swift */; };
+		07690931293F7A5D00B1E0C1 /* DeshboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0769092F293F7A5C00B1E0C1 /* DeshboardCell.swift */; };
+		07690932293F7A5D00B1E0C1 /* DeshboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07690930293F7A5D00B1E0C1 /* DeshboardCell.xib */; };
+		07690938293F7FB500B1E0C1 /* DeshboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07690937293F7FB500B1E0C1 /* DeshboardModel.swift */; };
+		0769093D293FA34900B1E0C1 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0769093C293FA34900B1E0C1 /* GradientView.swift */; };
 		076A89D1292E60A10079B2B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89D0292E60A10079B2B2 /* AppDelegate.swift */; };
 		076A89D3292E60A10079B2B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89D2292E60A10079B2B2 /* SceneDelegate.swift */; };
 		076A89D5292E60A10079B2B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A89D4292E60A10079B2B2 /* ViewController.swift */; };
@@ -112,6 +116,10 @@
 		07629703293E0DB100316445 /* SelectClassTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectClassTVC.swift; sourceTree = "<group>"; };
 		07629704293E0DB100316445 /* SelectClassTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectClassTVC.xib; sourceTree = "<group>"; };
 		0762970A293E12EB00316445 /* ExamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamModel.swift; sourceTree = "<group>"; };
+		0769092F293F7A5C00B1E0C1 /* DeshboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeshboardCell.swift; sourceTree = "<group>"; };
+		07690930293F7A5D00B1E0C1 /* DeshboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeshboardCell.xib; sourceTree = "<group>"; };
+		07690937293F7FB500B1E0C1 /* DeshboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeshboardModel.swift; sourceTree = "<group>"; };
+		0769093C293FA34900B1E0C1 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		076A89CD292E60A10079B2B2 /* Mansarovar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mansarovar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		076A89D0292E60A10079B2B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		076A89D2292E60A10079B2B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +212,8 @@
 			children = (
 				075D2835293DBF99007D4A46 /* SliderImagesCell.swift */,
 				075D2836293DBF99007D4A46 /* SliderImagesCell.xib */,
+				0769092F293F7A5C00B1E0C1 /* DeshboardCell.swift */,
+				07690930293F7A5D00B1E0C1 /* DeshboardCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +223,7 @@
 			children = (
 				0762970A293E12EB00316445 /* ExamModel.swift */,
 				075C83D0293EECED008EE45D /* SubjectsModel.swift */,
+				07690937293F7FB500B1E0C1 /* DeshboardModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				076296FB293E0D5100316445 /* SelectClassVC.swift */,
+				0769093C293FA34900B1E0C1 /* GradientView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -537,6 +549,7 @@
 				075BAAF02939B8FF00E698AB /* Roboto-MediumItalic.ttf in Resources */,
 				075BAAF22939B8FF00E698AB /* Roboto-ThinItalic.ttf in Resources */,
 				075BAAF42939B8FF00E698AB /* Roboto-Medium.ttf in Resources */,
+				07690932293F7A5D00B1E0C1 /* DeshboardCell.xib in Resources */,
 				076A89DA292E60A30079B2B2 /* Assets.xcassets in Resources */,
 				075845D6293B093C005565F7 /* TestSeriesCell.xib in Resources */,
 				075BAAEF2939B8FF00E698AB /* Roboto-Black.ttf in Resources */,
@@ -669,12 +682,15 @@
 			files = (
 				0762970B293E12EB00316445 /* ExamModel.swift in Sources */,
 				076296FC293E0D5100316445 /* SelectClassVC.swift in Sources */,
+				07690931293F7A5D00B1E0C1 /* DeshboardCell.swift in Sources */,
 				075845DB293B166F005565F7 /* AllTestSeriesModel.swift in Sources */,
+				07690938293F7FB500B1E0C1 /* DeshboardModel.swift in Sources */,
 				076A8A0C292E6C5E0079B2B2 /* LoginVC.swift in Sources */,
 				075D9664293CB242007DAC82 /* Constant.swift in Sources */,
 				075BAAFD2939D71700E698AB /* ForgotPasswordVC.swift in Sources */,
 				076A89D5292E60A10079B2B2 /* ViewController.swift in Sources */,
 				07629705293E0DB100316445 /* SelectClassTVC.swift in Sources */,
+				0769093D293FA34900B1E0C1 /* GradientView.swift in Sources */,
 				075D2837293DBF99007D4A46 /* SliderImagesCell.swift in Sources */,
 				075845CF293B08F6005565F7 /* TestSeriesVC.swift in Sources */,
 				075B7884293BAEE600A94C82 /* RegisterModer.swift in Sources */,

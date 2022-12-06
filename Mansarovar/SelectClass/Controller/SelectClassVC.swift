@@ -34,6 +34,7 @@ class SelectClassVC: UIViewController {
         
         if selected != -1 {
             updateExam()
+            
         } else {
             showAlert(title: "", message: "Please Select Class") { (str) in
                 
@@ -77,6 +78,10 @@ extension SelectClassVC: UITableViewDelegate,UITableViewDataSource {
     }
 
 
+    func pushToDeshboardVC() {
+        let vc = UIStoryboard(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "DeshboardVC") as! DeshboardVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
     //MARK:- Api call
     
     // AllExam api
@@ -126,10 +131,11 @@ extension SelectClassVC: UITableViewDelegate,UITableViewDataSource {
     // update api
     
     func updateExam() {
+        
         if selected != -1 {
             self.examsID = arrOfExam[self.selected].c_id ?? 0
         }
-        
+        self.startAnimation()
         let apiName = "https://eteachnow.com/mobile/app/update-exam"
         guard let url = URL(string: apiName) else {
             return
@@ -152,6 +158,7 @@ extension SelectClassVC: UITableViewDelegate,UITableViewDataSource {
                    // self.arrOfExam = obj.exams
                     DispatchQueue.main.async {
                         self.selectClassTableView.reloadData()
+                        self.pushToDeshboardVC()
                     }
                     
                 } else {
