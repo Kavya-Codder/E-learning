@@ -875,12 +875,84 @@
             </objects>
             <point key="canvasLocation" x="1875.3623188405797" y="755.35714285714278"/>
         </scene>
+        <!--NotificationVC-->
+        <scene sceneID="7Pl-EU-hT9">
+            <objects>
+                <viewController storyboardIdentifier="NotificationVC" id="OCy-9W-y9f" customClass="NotificationVC" customModule="Mansarovar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0d5-qm-wCu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8WN-Pf-lqp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIc-8o-ouW">
+                                        <rect key="frame" x="15" y="55" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="cDL-Ki-0bo"/>
+                                            <constraint firstAttribute="height" constant="20" id="qaV-2q-HZV"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="left-arrow (3)"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxs-43-7Wu">
+                                        <rect key="frame" x="50" y="50" width="324" height="29.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="25"/>
+                                        <color key="textColor" name="loginButton"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="qxs-43-7Wu" firstAttribute="centerY" secondItem="WIc-8o-ouW" secondAttribute="centerY" id="DK7-nS-Ks2"/>
+                                    <constraint firstItem="qxs-43-7Wu" firstAttribute="leading" secondItem="WIc-8o-ouW" secondAttribute="trailing" constant="15" id="K32-pl-KZS"/>
+                                    <constraint firstAttribute="trailing" secondItem="qxs-43-7Wu" secondAttribute="trailing" constant="40" id="Kux-Hk-3RQ"/>
+                                    <constraint firstItem="qxs-43-7Wu" firstAttribute="top" secondItem="8WN-Pf-lqp" secondAttribute="top" constant="50" id="Q4A-L1-JlX"/>
+                                    <constraint firstAttribute="height" constant="90" id="XUR-m9-WdU"/>
+                                    <constraint firstItem="WIc-8o-ouW" firstAttribute="leading" secondItem="8WN-Pf-lqp" secondAttribute="leading" constant="15" id="iQw-IY-TWr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Unh-2T-pl3">
+                                <rect key="frame" x="0.0" y="90" width="414" height="2"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="ZwG-RS-T0L"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kzi-CG-kkM">
+                                <rect key="frame" x="0.0" y="97" width="414" height="765"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eOu-vI-QI2"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="Kzi-CG-kkM" firstAttribute="top" secondItem="Unh-2T-pl3" secondAttribute="bottom" constant="5" id="K8g-78-csF"/>
+                            <constraint firstItem="eOu-vI-QI2" firstAttribute="trailing" secondItem="Kzi-CG-kkM" secondAttribute="trailing" id="T3F-7E-gZJ"/>
+                            <constraint firstItem="8WN-Pf-lqp" firstAttribute="leading" secondItem="eOu-vI-QI2" secondAttribute="leading" id="YC3-5z-Jhe"/>
+                            <constraint firstItem="8WN-Pf-lqp" firstAttribute="top" secondItem="0d5-qm-wCu" secondAttribute="top" id="ZxA-hx-Owl"/>
+                            <constraint firstItem="eOu-vI-QI2" firstAttribute="trailing" secondItem="Unh-2T-pl3" secondAttribute="trailing" id="btk-1G-yKJ"/>
+                            <constraint firstItem="Kzi-CG-kkM" firstAttribute="leading" secondItem="eOu-vI-QI2" secondAttribute="leading" id="fhm-fz-3MC"/>
+                            <constraint firstItem="8WN-Pf-lqp" firstAttribute="trailing" secondItem="eOu-vI-QI2" secondAttribute="trailing" id="g9k-7V-q68"/>
+                            <constraint firstItem="Unh-2T-pl3" firstAttribute="top" secondItem="8WN-Pf-lqp" secondAttribute="bottom" id="nEW-94-LCr"/>
+                            <constraint firstItem="Unh-2T-pl3" firstAttribute="leading" secondItem="eOu-vI-QI2" secondAttribute="leading" id="rAt-6T-94I"/>
+                            <constraint firstItem="eOu-vI-QI2" firstAttribute="bottom" secondItem="Kzi-CG-kkM" secondAttribute="bottom" id="tw2-RH-RJU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="notificationTableView" destination="Kzi-CG-kkM" id="Wyv-G6-RI4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NW2-nF-VIs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1094" y="-884"/>
+        </scene>
     </scenes>
     <resources>
         <image name="back_balck" width="128" height="128"/>
         <image name="back_white" width="25" height="25"/>
         <image name="blueHat" width="512" height="512"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="left-arrow (3)" width="24" height="24"/>
         <image name="whiteHat" width="512" height="512"/>
         <namedColor name="White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -893,6 +965,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

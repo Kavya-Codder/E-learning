@@ -128,7 +128,7 @@ extension SignUpVC {
         }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        let param = ["instid": 31,"name": txtName.text ?? "", "email": txtEmail.text ?? "","deviceId": "12112kkj", "password": txtPassword.text ?? "", "password_again": txtConPassword.text ?? "","phone": txtPhone.text ?? ""] as [String : Any]
+        let param = ["instid": 20,"name": txtName.text ?? "", "email": txtEmail.text ?? "","deviceId": "12112kkj", "password": txtPassword.text ?? "", "password_again": txtConPassword.text ?? "","phone": txtPhone.text ?? ""] as [String : Any]
         print(param)
         request.addValue("application/json", forHTTPHeaderField: "content-type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")

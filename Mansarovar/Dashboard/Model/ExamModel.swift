@@ -11,16 +11,16 @@ struct ExamBaseModel {
     var status: String?
     var exams: [ExamModel] = []
     var show_pay_btn: Int?
-    init(responce: [String: Any]) {
-        self.msg = responce["msg"] as? String
-        self.status = responce["status"] as? String
-        if let examData = responce["exams"] as? [[String: Any]] {
+    init(response: [String: Any]) {
+        self.msg = response["msg"] as? String
+        self.status = response["status"] as? String
+        if let examData = response["exams"] as? [[String: Any]] {
             examData.forEach { respnceDic in
-                let examDetail = ExamModel(responce: respnceDic)
+                let examDetail = ExamModel(response: respnceDic)
                 exams.append(examDetail)
             }
         }
-        self.show_pay_btn = responce["show_pay_btn"] as? Int
+        self.show_pay_btn = response["show_pay_btn"] as? Int
     }
 }
 struct ExamModel {
@@ -37,19 +37,19 @@ struct ExamModel {
     var validity : Int?
     var pay_model : String?
     var youtube_id: String?
-    init(responce: [String: Any]) {
-        self.c_id = responce["c_id"] as? Int
-        self.name = responce["name"] as? String
-        self.name1 = responce["name1"] as? String
-        self.alias = responce["alias"] as? String
-        self.image = responce["image"] as? String
-        self.details = responce["details"] as? String
-        self.status = responce["status"] as? Int
-        self.instid = responce["instid"] as? Int
-        self.price = responce["price"] as? Int
-        self.ori_price = responce["ori_price"] as? Int
-        self.validity = responce["validity"] as? Int
-        self.pay_model = responce["pay_model"] as? String
-        self.youtube_id = responce["youtube_id"] as? String
+    init(response: [String: Any]) {
+        self.c_id = response["c_id"] as? Int
+        self.name = response["name"] as? String
+        self.name1 = response["name1"] as? String
+        self.alias = response["alias"] as? String
+        self.image = response["image"] as? String
+        self.details = response["details"] as? String
+        self.status = response["status"] as? Int
+        self.instid = response["instid"] as? Int
+        self.price = response["price"] as? Int
+        self.ori_price = response["ori_price"] as? Int
+        self.validity = response["validity"] as? Int
+        self.pay_model = response["pay_model"] as? String
+        self.youtube_id = response["youtube_id"] as? String
     }
 }

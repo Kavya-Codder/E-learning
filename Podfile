@@ -7,12 +7,14 @@ target 'Mansarovar' do
 
   # Pods for Mansarovar
 
+   pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git', :tag => '4.8.0'
+   pod 'SDWebImage', '5.12.6'
+
+
   target 'MansarovarTests' do
     inherit! :search_paths
     # Pods for testing
   end
- pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git', :tag => '4.8.0'
-    
 
   target 'MansarovarUITests' do
     # Pods for testing

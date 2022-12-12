@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EducatorListCell" id="gTV-IL-0wX" customClass="EducatorListCell" customModule="Mansarovar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="152" height="190"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="152" height="190"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myA-kh-Mfc">
+                        <rect key="frame" x="0.0" y="0.0" width="152" height="190"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="fVz-R7-sAe">
+                                <rect key="frame" x="0.0" y="0.0" width="152" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="WgD-TI-n6t"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" kavya prajapati" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWB-FH-npB">
+                                <rect key="frame" x="5" y="132" width="142" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="zFU-BZ-AZk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" name="loginButton"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pWB-FH-npB" secondAttribute="bottom" id="3TR-Qd-jax"/>
+                            <constraint firstAttribute="trailing" secondItem="pWB-FH-npB" secondAttribute="trailing" constant="5" id="Cwn-L8-Wcw"/>
+                            <constraint firstItem="fVz-R7-sAe" firstAttribute="leading" secondItem="myA-kh-Mfc" secondAttribute="leading" id="L84-sM-c1w"/>
+                            <constraint firstItem="pWB-FH-npB" firstAttribute="leading" secondItem="myA-kh-Mfc" secondAttribute="leading" constant="5" id="NwC-S6-cai"/>
+                            <constraint firstItem="fVz-R7-sAe" firstAttribute="top" secondItem="myA-kh-Mfc" secondAttribute="top" id="Oi0-iS-FRY"/>
+                            <constraint firstAttribute="trailing" secondItem="fVz-R7-sAe" secondAttribute="trailing" id="TbI-6v-flQ"/>
+                            <constraint firstItem="pWB-FH-npB" firstAttribute="top" secondItem="fVz-R7-sAe" secondAttribute="bottom" constant="2" id="ZGr-XH-fTa"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="myA-kh-Mfc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ABN-8n-e9a"/>
+                <constraint firstAttribute="bottom" secondItem="myA-kh-Mfc" secondAttribute="bottom" id="Ero-zX-gU5"/>
+                <constraint firstItem="myA-kh-Mfc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TBw-bC-wBQ"/>
+                <constraint firstAttribute="trailing" secondItem="myA-kh-Mfc" secondAttribute="trailing" id="lTM-Wy-Fsi"/>
+            </constraints>
+            <size key="customSize" width="152" height="174"/>
+            <connections>
+                <outlet property="imgEducator" destination="fVz-R7-sAe" id="Wss-uj-g6o"/>
+                <outlet property="lblName" destination="pWB-FH-npB" id="1Ar-vc-2Wz"/>
+                <outlet property="viewContainer" destination="myA-kh-Mfc" id="YQt-7u-86G"/>
+            </connections>
+            <point key="canvasLocation" x="-197.10144927536234" y="23.4375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="man" width="64" height="64"/>
+        <namedColor name="loginButton">
+            <color red="0.086274509803921567" green="0.17254901960784313" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

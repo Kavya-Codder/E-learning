@@ -29,30 +29,30 @@ struct SubjectModel  {
     var livenow : Int?
     var image : String?
     
-    init(respnce: [String: Any]) {
+    init(respnse: [String: Any]) {
         
-        self.subject_id = respnce["subject_id"] as? Int
-        self.parent_id = respnce["parent_id"] as? Int
-        self.subject_name = respnce["subject_name"] as? String
-        self.subject_alias = respnce["subject_alias"] as? String
-        self.num = respnce["num"] as? Int
-        self.status = respnce["status"] as? Int
-        self.mix = respnce["mix"] as? Int
-        self.mob_publish = respnce["mob_publish"] as? Int
-        self.mobile_logo_path = respnce["mobile_logo_path"] as? String
-        self.details = respnce["details"] as? String
-        self.exam_id = respnce["exam_id"] as? Int
-        self.instid = respnce["instid"] as? Int
-        self.v_count = respnce["v_count"] as? Int
-        self.e_count = respnce["e_count"] as? Int
-        self.t_count = respnce["t_count"] as? Int
-        self.c_count = respnce["c_count"] as? Int
-        self.price = respnce["price"] as? Int
-        self.ori_price = respnce["ori_price"] as? Int
-        self.validity = respnce["validity"] as? Int
-        self.pay_model = respnce["pay_model"] as? String
-        self.livenow = respnce["livenow"] as? Int
-        self.image = respnce["image"] as? String
+        self.subject_id = respnse["subject_id"] as? Int
+        self.parent_id = respnse["parent_id"] as? Int
+        self.subject_name = respnse["subject_name"] as? String
+        self.subject_alias = respnse["subject_alias"] as? String
+        self.num = respnse["num"] as? Int
+        self.status = respnse["status"] as? Int
+        self.mix = respnse["mix"] as? Int
+        self.mob_publish = respnse["mob_publish"] as? Int
+        self.mobile_logo_path = respnse["mobile_logo_path"] as? String
+        self.details = respnse["details"] as? String
+        self.exam_id = respnse["exam_id"] as? Int
+        self.instid = respnse["instid"] as? Int
+        self.v_count = respnse["v_count"] as? Int
+        self.e_count = respnse["e_count"] as? Int
+        self.t_count = respnse["t_count"] as? Int
+        self.c_count = respnse["c_count"] as? Int
+        self.price = respnse["price"] as? Int
+        self.ori_price = respnse["ori_price"] as? Int
+        self.validity = respnse["validity"] as? Int
+        self.pay_model = respnse["pay_model"] as? String
+        self.livenow = respnse["livenow"] as? Int
+        self.image = respnse["image"] as? String
     }
         
     }

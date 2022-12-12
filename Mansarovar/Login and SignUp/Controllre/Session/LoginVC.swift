@@ -23,10 +23,20 @@ class LoginVC: UIViewController {
     @IBOutlet weak var lblEmail: UILabel!
     @IBOutlet weak var lblPassword: UILabel!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loginInitialSetUp()
         
+        if (UserDefaults() != nil) {
+            pushToDeshboardVC()
+        }
+//        if (users.first?.email ?? "") == (self.txtEmail.text ?? "") {
+//            pushToDeshboardVC()
+//        }
+
+
     }
     
     @IBAction func onClickTxtEmail(_ sender: Any) {
@@ -44,7 +54,6 @@ class LoginVC: UIViewController {
         
         let validation = doValidation()
         if validation.0 {
-            
             signIn()
         }else {
             showAlert(title: "Erroe", message: validation.1, hendler: nil)
@@ -108,13 +117,14 @@ extension LoginVC {
 
     func signIn() {
         self.startAnimation()
+        
         let apiNmae = "https://eteachnow.com/mobile/app/user/login"
         guard let url = URL(string: apiNmae) else {
             return
         }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        let param = ["instid": 31, "email": txtEmail.text ?? "", "password": txtPassword.text ?? ""] as [String : Any]
+        let param = ["instid": 20, "email": txtEmail.text ?? "", "password": txtPassword.text ?? ""] as [String : Any]
         request.addValue("application/json", forHTTPHeaderField: "content-type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: [])
@@ -127,8 +137,12 @@ extension LoginVC {
                 if obj.status == "200" {
                     
                     DispatchQueue.main.async {
+                        
                         self.displayAlert(with: "Success", message: "Login Successfully", buttons: ["ok"]) { (str) in
-                            self.pushToDeshboardVC()
+                           
+                            UserDefaults.saveUserVales(user: obj )
+                                self.pushToDeshboardVC()
+                            
                         }
                     }
                 } else {

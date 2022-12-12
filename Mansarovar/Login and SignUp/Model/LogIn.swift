@@ -14,6 +14,7 @@ struct LoginModel {
     var name: String?
     var courseid: String?
     var coursename: String?
+    var email: String?
     init(response: [String: Any]) {
         self.error = response["error"] as? String
         self.msg = response["msg"] as? String
@@ -22,5 +23,6 @@ struct LoginModel {
         self.name = response["name"] as? String
         self.courseid = response["courseid"] as? String
         self.coursename = response["coursename"] as? String
+        self.email = response["email"] as? String
     }
 }

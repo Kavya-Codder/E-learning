@@ -59,7 +59,7 @@ class ForgotPasswordVC: UIViewController {
         }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        let param = ["instid": 31, "email": txtEmail.text ?? ""] as [String : Any]
+        let param = ["instid": 20, "email": txtEmail.text ?? ""] as [String : Any]
         request.addValue("application/json", forHTTPHeaderField: "content-type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: [])

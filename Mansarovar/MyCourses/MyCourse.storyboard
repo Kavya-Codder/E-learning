@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My CourseVC-->
+        <scene sceneID="lVQ-Yb-YWw">
+            <objects>
+                <viewController storyboardIdentifier="MyCourseVC" id="JaT-Ec-y9k" customClass="MyCourseVC" customModule="Mansarovar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ar0-P7-yBD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Muy-tn-bTg">
+                                <rect key="frame" x="30" y="348" width="354" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFw-A1-p3k">
+                                        <rect key="frame" x="52" y="75" width="250" height="50"/>
+                                        <color key="backgroundColor" name="loginButton"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8rV-MB-TKr"/>
+                                            <constraint firstAttribute="width" constant="250" id="XeB-sz-Thl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Browse Courses -&gt;">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7Nq-fT-Al4">
+                                        <rect key="frame" x="30" y="5" width="294" height="48"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No courses purchase by you!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZx-wZ-o2w">
+                                                <rect key="frame" x="0.0" y="0.0" width="294" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please browse courses" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4O-QW-cm1">
+                                                <rect key="frame" x="0.0" y="26.5" width="294" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="WZx-wZ-o2w" secondAttribute="trailing" id="SGf-kP-7Tb"/>
+                                            <constraint firstItem="WZx-wZ-o2w" firstAttribute="leading" secondItem="7Nq-fT-Al4" secondAttribute="leading" id="XqT-hA-QHe"/>
+                                            <constraint firstItem="g4O-QW-cm1" firstAttribute="leading" secondItem="7Nq-fT-Al4" secondAttribute="leading" id="alJ-6Y-10t"/>
+                                            <constraint firstAttribute="trailing" secondItem="g4O-QW-cm1" secondAttribute="trailing" id="bRJ-QA-iRm"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="7Nq-fT-Al4" firstAttribute="top" secondItem="Muy-tn-bTg" secondAttribute="top" constant="5" id="0dT-jK-tDU"/>
+                                    <constraint firstItem="VFw-A1-p3k" firstAttribute="centerX" secondItem="Muy-tn-bTg" secondAttribute="centerX" id="1w1-UW-Set"/>
+                                    <constraint firstItem="7Nq-fT-Al4" firstAttribute="centerX" secondItem="Muy-tn-bTg" secondAttribute="centerX" id="36t-Qb-0ic"/>
+                                    <constraint firstItem="7Nq-fT-Al4" firstAttribute="leading" secondItem="Muy-tn-bTg" secondAttribute="leading" constant="30" id="AuW-3z-cfc"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Nq-fT-Al4" secondAttribute="trailing" constant="30" id="B9X-Qe-EIt"/>
+                                    <constraint firstItem="VFw-A1-p3k" firstAttribute="centerY" secondItem="Muy-tn-bTg" secondAttribute="centerY" id="bKY-Da-stn"/>
+                                    <constraint firstAttribute="height" constant="200" id="egg-gk-OmO"/>
+                                    <constraint firstItem="VFw-A1-p3k" firstAttribute="top" secondItem="7Nq-fT-Al4" secondAttribute="bottom" constant="22" id="hZr-Iv-I1k"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aa0-L4-M2S">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqb-Qa-ggF">
+                                        <rect key="frame" x="15" y="52.5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="VXX-up-kl4"/>
+                                            <constraint firstAttribute="width" constant="25" id="v3J-qJ-CH4"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="blueMenu"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Courses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsp-h2-rS2">
+                                        <rect key="frame" x="55" y="50" width="314" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="textColor" name="loginButton"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWt-ca-3xV">
+                                        <rect key="frame" x="374" y="55" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="hFY-8E-5NA"/>
+                                            <constraint firstAttribute="width" constant="20" id="mrG-KQ-LuG"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="bell"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="yqb-Qa-ggF" firstAttribute="leading" secondItem="aa0-L4-M2S" secondAttribute="leading" constant="15" id="1T4-bu-ych"/>
+                                    <constraint firstItem="YWt-ca-3xV" firstAttribute="leading" secondItem="Tsp-h2-rS2" secondAttribute="trailing" constant="5" id="2lP-wQ-qtd"/>
+                                    <constraint firstItem="yqb-Qa-ggF" firstAttribute="centerY" secondItem="Tsp-h2-rS2" secondAttribute="centerY" id="4sz-C6-86d"/>
+                                    <constraint firstAttribute="height" constant="90" id="FLh-GE-tef"/>
+                                    <constraint firstItem="Tsp-h2-rS2" firstAttribute="leading" secondItem="yqb-Qa-ggF" secondAttribute="trailing" constant="15" id="hNe-d8-jGv"/>
+                                    <constraint firstItem="Tsp-h2-rS2" firstAttribute="top" secondItem="aa0-L4-M2S" secondAttribute="top" constant="50" id="oU4-iz-L60"/>
+                                    <constraint firstAttribute="trailing" secondItem="YWt-ca-3xV" secondAttribute="trailing" constant="20" id="yW5-wn-Ga2"/>
+                                    <constraint firstItem="YWt-ca-3xV" firstAttribute="centerY" secondItem="Tsp-h2-rS2" secondAttribute="centerY" id="zKd-va-ora"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eh-mg-xod">
+                                <rect key="frame" x="0.0" y="90" width="414" height="2"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="2n0-Ir-wUz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WNa-72-uO0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WNa-72-uO0" firstAttribute="trailing" secondItem="Muy-tn-bTg" secondAttribute="trailing" constant="30" id="0Cx-lM-JIP"/>
+                            <constraint firstItem="aa0-L4-M2S" firstAttribute="leading" secondItem="WNa-72-uO0" secondAttribute="leading" id="FqQ-1r-p6R"/>
+                            <constraint firstItem="WNa-72-uO0" firstAttribute="trailing" secondItem="aa0-L4-M2S" secondAttribute="trailing" id="REE-hL-IP0"/>
+                            <constraint firstItem="6eh-mg-xod" firstAttribute="top" secondItem="aa0-L4-M2S" secondAttribute="bottom" id="Vep-E6-Z6F"/>
+                            <constraint firstItem="aa0-L4-M2S" firstAttribute="top" secondItem="ar0-P7-yBD" secondAttribute="top" id="bC8-Th-0ly"/>
+                            <constraint firstItem="WNa-72-uO0" firstAttribute="trailing" secondItem="6eh-mg-xod" secondAttribute="trailing" id="fkf-NW-cai"/>
+                            <constraint firstItem="Muy-tn-bTg" firstAttribute="leading" secondItem="WNa-72-uO0" secondAttribute="leading" constant="30" id="idp-jh-I9t"/>
+                            <constraint firstItem="6eh-mg-xod" firstAttribute="leading" secondItem="WNa-72-uO0" secondAttribute="leading" id="mwo-kP-iwl"/>
+                            <constraint firstItem="Muy-tn-bTg" firstAttribute="centerX" secondItem="ar0-P7-yBD" secondAttribute="centerX" id="rk2-dW-blF"/>
+                            <constraint firstItem="Muy-tn-bTg" firstAttribute="centerY" secondItem="ar0-P7-yBD" secondAttribute="centerY" id="ysg-at-INB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gNB-1V-UCt"/>
+                    <connections>
+                        <outlet property="btnBrowse" destination="VFw-A1-p3k" id="fct-Si-wGr"/>
+                        <outlet property="lblNoCourse" destination="WZx-wZ-o2w" id="Wls-S5-16g"/>
+                        <outlet property="lblPleaseBrowse" destination="g4O-QW-cm1" id="acJ-OD-YVv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="To2-eL-Hxn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573.91304347826087" y="88.392857142857139"/>
+        </scene>
+        <!--My Course-->
+        <scene sceneID="cRE-nI-CEc">
+            <objects>
+                <navigationController storyboardIdentifier="MyCourseNav" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="xxf-qE-MAp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Course" image="blackMyCoyrse" selectedImage="blueMyCourse" id="0aR-OR-qXk">
+                        <color key="badgeColor" name="loginButton"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="oJp-oK-oGy">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JaT-Ec-y9k" kind="relationship" relationship="rootViewController" id="92o-xB-9oO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wtT-uq-9sP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-336.23188405797106" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bell" width="32" height="32"/>
+        <image name="blackMyCoyrse" width="32" height="32"/>
+        <image name="blueMenu" width="32" height="32"/>
+        <image name="blueMyCourse" width="32" height="32"/>
+        <namedColor name="loginButton">
+            <color red="0.086274509803921567" green="0.17254901960784313" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

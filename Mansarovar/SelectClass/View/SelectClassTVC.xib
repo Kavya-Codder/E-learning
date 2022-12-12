@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -41,8 +42,8 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Tv-YC-w1A">
-                        <rect key="frame" x="8" y="99" width="331" height="1"/>
-                        <color key="backgroundColor" name="loginButton"/>
+                        <rect key="frame" x="0.0" y="99" width="347" height="1"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="DRM-NF-UkW"/>
                         </constraints>
@@ -54,15 +55,16 @@
                     <constraint firstItem="WOy-YT-ztc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="2cu-4C-Y7m"/>
                     <constraint firstItem="0Bc-sw-2rc" firstAttribute="centerY" secondItem="WOy-YT-ztc" secondAttribute="centerY" id="2da-Rt-vsu"/>
                     <constraint firstItem="0Bc-sw-2rc" firstAttribute="leading" secondItem="WOy-YT-ztc" secondAttribute="trailing" constant="20" id="BCm-ZB-7fe"/>
-                    <constraint firstAttribute="trailing" secondItem="2Tv-YC-w1A" secondAttribute="trailing" constant="8" id="Jtu-yj-z1P"/>
+                    <constraint firstAttribute="trailing" secondItem="2Tv-YC-w1A" secondAttribute="trailing" id="Jtu-yj-z1P"/>
                     <constraint firstItem="WOy-YT-ztc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LSF-4W-95U"/>
-                    <constraint firstItem="2Tv-YC-w1A" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="PMw-wd-bQz"/>
+                    <constraint firstItem="2Tv-YC-w1A" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PMw-wd-bQz"/>
                     <constraint firstItem="3fu-ub-yGw" firstAttribute="centerY" secondItem="0Bc-sw-2rc" secondAttribute="centerY" id="cMT-pU-Uoe"/>
                     <constraint firstAttribute="bottom" secondItem="2Tv-YC-w1A" secondAttribute="bottom" id="vzL-wM-W9G"/>
                     <constraint firstItem="3fu-ub-yGw" firstAttribute="leading" secondItem="0Bc-sw-2rc" secondAttribute="trailing" constant="10" id="yuz-eb-cDK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="imgClass" destination="WOy-YT-ztc" id="iRx-oH-DOO"/>
                 <outlet property="imgSelect" destination="3fu-ub-yGw" id="ZzU-8A-Hmr"/>
@@ -77,5 +79,8 @@
         <namedColor name="loginButton">
             <color red="0.086274509803921567" green="0.17254901960784313" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

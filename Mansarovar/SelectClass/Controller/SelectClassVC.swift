@@ -16,10 +16,12 @@ class SelectClassVC: UIViewController {
     var arrOfExam: [ExamModel] = []
     var selected = -1
     var examsID = 0
-    static var selectedExam = ""
+    static var selectedExam: ExamModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialSetUp()
+        
         selectClassTableView.delegate = self
         selectClassTableView.dataSource = self
         selectClassTableView.register(UINib(nibName: SelectClassTVC.identifier, bundle: nil), forCellReuseIdentifier: SelectClassTVC.identifier)
@@ -54,9 +56,10 @@ extension SelectClassVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = selectClassTableView.dequeueReusableCell(withIdentifier: SelectClassTVC.identifier, for: indexPath) as! SelectClassTVC
         let objExam = arrOfExam[indexPath.row]
+        
         cell.lblClassName.text = objExam.name
         if selected == -1 {
-            if(objExam.name ?? "") == SelectClassVC.selectedExam {
+            if(objExam.name ?? "") == SelectClassVC.selectedExam?.name ?? "" {
                 cell.imgSelect.isHidden = false
                 self.selected = indexPath.row
                }else {
@@ -73,7 +76,7 @@ extension SelectClassVC: UITableViewDelegate,UITableViewDataSource {
           }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selected = indexPath.row
-      
+        
         self.selectClassTableView.reloadData()
     }
 
@@ -82,34 +85,43 @@ extension SelectClassVC: UITableViewDelegate,UITableViewDataSource {
         let vc = UIStoryboard(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "DeshboardVC") as! DeshboardVC
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func initialSetUp() {
+        btnSubmit.clipsToBounds = true
+        btnSubmit.layer.cornerRadius = 15
+    }
     //MARK:- Api call
     
     // AllExam api
 
     func apiExam() {
-        self.startAnimation()
+        //self.startAnimation()
         let apiNmae = "https://eteachnow.com/mobile/app/all-exams"
         guard let url = URL(string: apiNmae) else {
             return
         }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        let param = ["instid": 31] as [String : Any]
+        let param = ["instid": 20, "email": "sunil12@gmail.com"] as [String : Any]
         request.addValue("application/json", forHTTPHeaderField: "content-type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: [])
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            self.stopAnimating()
+            //self.stopAnimating()
               do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed) as! Dictionary<String, Any>
                 
-                let obj = ExamBaseModel(responce: json)
+                let obj = ExamBaseModel(response: json)
                 if obj.status == "200" {
+                    if obj.exams != nil {
                     self.arrOfExam = obj.exams
+                        
                     DispatchQueue.main.async {
+                        self.examsID = obj.exams.first?.c_id ?? 0
                         self.selectClassTableView.reloadData()
+                        
                     }
-                    
+                    }
                 } else {
                     DispatchQueue.main.async {
                         self.displayAlert(with: "Error", message: obj.msg, buttons: ["ok"]) { (str) in
@@ -132,33 +144,34 @@ extension SelectClassVC: UITableViewDelegate,UITableViewDataSource {
     
     func updateExam() {
         
-        if selected != -1 {
+        if selected != nil {
             self.examsID = arrOfExam[self.selected].c_id ?? 0
         }
-        self.startAnimation()
+       // self.startAnimation()
         let apiName = "https://eteachnow.com/mobile/app/update-exam"
         guard let url = URL(string: apiName) else {
             return
         }
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-//        let param = ["instid": 31,"email": "kavya8958p@gmail.com","deviceId": 45345,"examid": self.examsID] as [String : Any]
-        let param = ["email": "joshuatimon8@gmail.com", "examid": self.examsID, "instid": 31] as [String : Any]
+        let param = ["email": "sunil12@gmail.com", "examid": self.examsID, "instid": 20] as [String : Any]
         request.addValue("application/json", forHTTPHeaderField: "content-type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: [])
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            self.stopAnimating()
+          //  self.stopAnimating()
               do {
                 let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed) as! Dictionary<String, Any>
                 print(json)
                 
                 let obj = UpdateExamModel(response: json)
                 if obj.status == "200" {
-                   // self.arrOfExam = obj.exams
+                   
                     DispatchQueue.main.async {
                         self.selectClassTableView.reloadData()
-                        self.pushToDeshboardVC()
+                       self.tabBarController?.selectedIndex = 0
+                      //  self.pushToDeshboardVC()
+
                     }
                     
                 } else {
