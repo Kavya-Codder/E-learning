@@ -8,7 +8,7 @@
 import UIKit
 
 class NotificationVC: UIViewController {
-
+    
     @IBOutlet weak var notificationTableView: UITableView!
     
     var notification: [NotificationsModel] = []
@@ -16,7 +16,7 @@ class NotificationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         notificationApi()
-
+        
         tabBarController?.tabBar.isHidden = true
         
         notificationTableView.dataSource = self
@@ -43,38 +43,23 @@ extension NotificationVC: UITableViewDelegate, UITableViewDataSource {
         
     }
     
-    // Api Call
-    
+   // MARK:-  Api Call
+
     func notificationApi() {
-        let apiNmae = "https://eteachnow.com/mobile/app/all-notifications"
-        guard let url = URL(string: apiNmae) else {
-            return
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
+        startAnimating()
         let param = ["instid": 20, "email": "sunil12@gmail.com"] as [String : Any]
-        request.addValue("application/json", forHTTPHeaderField: "content-type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: [])
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-              do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed) as! Dictionary<String, Any>
-                
-                let Nobj = NotificationBaseModel(response: json)
-                if Nobj.status == "200" {
-                    self.notification = Nobj.notifications
+        ApiManager.networdRequest(requestType: HttpRequestType.POST, apiUrl: ApiManager.notification, inputParam: param) { (jsonResponse, reeor, success) in
+            self.stopAnimating()
+            if success {
+                if let response = jsonResponse {
+                    let obj = NotificationBaseModel(response: response)
+                    self.notification = obj.notifications
                     DispatchQueue.main.async {
                         self.notificationTableView.reloadData()
                     }
                 }
-                print(json)
-                        
-                }catch {
-                    
-              }
-                    
-        }.resume()
+            }
+        }
+        
     }
-    
-    
 }

@@ -120,50 +120,25 @@ extension SignUpVC {
         return(true, "")
     }
     
+    //MARK:- Api call
+    
     func signUp() {
         self.startAnimation()
-        let apiNmae = "https://eteachnow.com/mobile/app/user/register"
-        guard let url = URL(string: apiNmae) else {
-            return
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
         let param = ["instid": 20,"name": txtName.text ?? "", "email": txtEmail.text ?? "","deviceId": "12112kkj", "password": txtPassword.text ?? "", "password_again": txtConPassword.text ?? "","phone": txtPhone.text ?? ""] as [String : Any]
-        print(param)
-        request.addValue("application/json", forHTTPHeaderField: "content-type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: [])
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
+        
+        ApiManager.networdRequest(requestType: HttpRequestType.POST, apiUrl: ApiManager.signUp, inputParam: param) { (jsonResponse, error, success) in
             self.stopAnimating()
-
-            do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed) as! Dictionary<String, Any>
-               print(json)
-               let obj = LoginModel(response: json)
-                if obj.status ?? "" == "200" {
-                    
+            if success {
+                if let response = jsonResponse {
+                    let sObj = LoginModel(response: response)
                     DispatchQueue.main.async {
                         self.displayAlert(with: "Success", message: "You have been registered successfully", buttons: ["ok"]) { (str) in
                             self.navigationController?.popToRootViewController(animated: true)
                     }
                     }
-                    
-                } else {
-                    DispatchQueue.main.async {
-                        self.displayAlert(with: "Error", message: obj.msg, buttons: ["ok"]) { (str) in
-                            
-                        }
-                    }
                 }
-                print(json)
-
-            }catch {
-
             }
-        }.resume()
-    }
+        }
 
-    
-    
-    
+    }
 }

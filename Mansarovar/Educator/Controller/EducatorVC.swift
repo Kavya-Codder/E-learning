@@ -10,13 +10,13 @@ import SDWebImage
 
 class EducatorVC: UIViewController {
     
-
+    
     @IBOutlet weak var educatorCollectionView: UICollectionView!
     var arrEducator: [Educators] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         educatorApi()
         educatorCollectionView.delegate = self
         educatorCollectionView.dataSource = self
@@ -33,8 +33,8 @@ class EducatorVC: UIViewController {
         educatorCollectionView.collectionViewLayout = Layout
     }
     
-
-
+    
+    
 }
 
 //   Extension
@@ -47,44 +47,32 @@ extension EducatorVC: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = educatorCollectionView.dequeueReusableCell(withReuseIdentifier: EducatorListCell.identifier, for: indexPath) as! EducatorListCell
         let obj = arrEducator[indexPath.row]
         cell.lblName.text = obj.name ?? ""
-       // let imageUrl = URL(string: obj.image ?? "")
+        // let imageUrl = URL(string: obj.image ?? "")
         let imageUrl = URL(string: "https://eteachnow.com/" + (obj.image ?? ""))
-        cell.imgEducator.sd_setImage(with: imageUrl, placeholderImage: UIImage(systemName: "chemistry"))
+        cell.imgEducator.sd_setImage(with: imageUrl, placeholderImage: UIImage(systemName: "man"))
         cell.layer.cornerRadius = 8
         return cell
     }
     
-    // Api Call
+    //  MARK:- Api Call
     
     func educatorApi() {
-        let apiNmae = "https://eteachnow.com/mobile/app/get-educator-list"
-        guard let url = URL(string: apiNmae) else {
-            return
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
+        self.startAnimation()
         let param = ["instid": 20] as [String : Any]
-        request.addValue("application/json", forHTTPHeaderField: "content-type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: [])
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-              do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed) as! Dictionary<String, Any>
-                
-                let eObj = EducatorBaseModel(response: json)
-                if eObj.status == "200" {
+        ApiManager.networdRequest(requestType: HttpRequestType.POST, apiUrl: ApiManager.allEducator, inputParam: param) { (jsonResponse, error, success) in
+            self.stopAnimating()
+            if success {
+                if let response = jsonResponse {
+                    let eObj = EducatorBaseModel(response: response)
                     self.arrEducator = eObj.educators
                     DispatchQueue.main.async {
                         self.educatorCollectionView.reloadData()
                     }
                 }
-                print(json)
-                        
-                }catch {
-                    
-              }
-                    
-        }.resume()
+                
+            }
+        }
+       
     }
     
     

@@ -35,7 +35,7 @@ class SelectClassVC: UIViewController {
     @IBAction func onClickSubmitBtn(_ sender: Any) {
         
         if selected != -1 {
-            updateExam()
+            toUpdateExam()
             
         } else {
             showAlert(title: "", message: "Please Select Class") { (str) in
@@ -95,101 +95,45 @@ extension SelectClassVC: UITableViewDelegate,UITableViewDataSource {
     // AllExam api
 
     func apiExam() {
-        //self.startAnimation()
-        let apiNmae = "https://eteachnow.com/mobile/app/all-exams"
-        guard let url = URL(string: apiNmae) else {
-            return
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        let param = ["instid": 20, "email": "sunil12@gmail.com"] as [String : Any]
-        request.addValue("application/json", forHTTPHeaderField: "content-type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: [])
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            //self.stopAnimating()
-              do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed) as! Dictionary<String, Any>
-                
-                let obj = ExamBaseModel(response: json)
-                if obj.status == "200" {
-                    if obj.exams != nil {
-                    self.arrOfExam = obj.exams
-                        
+        self.startAnimation()
+        let param = ["instid": 20, "email": ApiManager.userId ?? ""] as [String : Any]
+        ApiManager.networdRequest(requestType: HttpRequestType.POST, apiUrl: ApiManager.allExams, inputParam: param) { (jsonResponse, error, success) in
+            self.stopAnimating()
+            if success {
+                if let response = jsonResponse {
+                    let obj = ExamBaseModel(response: response)
                     DispatchQueue.main.async {
+                        self.arrOfExam = obj.exams
                         self.examsID = obj.exams.first?.c_id ?? 0
                         self.selectClassTableView.reloadData()
                         
                     }
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        self.displayAlert(with: "Error", message: obj.msg, buttons: ["ok"]) { (str) in
-                            
-                        }
-                    }
                 }
-                    
-                        print(json)
-                        
-                    }catch {
-                    
-                    }
-                    
-            
-        }.resume()
+            }
+        }
     }
     
     // update api
     
-    func updateExam() {
+    func toUpdateExam() {
         
         if selected != nil {
             self.examsID = arrOfExam[self.selected].c_id ?? 0
         }
-       // self.startAnimation()
-        let apiName = "https://eteachnow.com/mobile/app/update-exam"
-        guard let url = URL(string: apiName) else {
-            return
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        let param = ["email": "sunil12@gmail.com", "examid": self.examsID, "instid": 20] as [String : Any]
-        request.addValue("application/json", forHTTPHeaderField: "content-type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: [])
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-          //  self.stopAnimating()
-              do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed) as! Dictionary<String, Any>
-                print(json)
-                
-                let obj = UpdateExamModel(response: json)
-                if obj.status == "200" {
-                   
+        self.startAnimation()
+        let param = ["email": ApiManager.userId ?? "", "examid": self.examsID, "instid": 20] as [String : Any]
+        ApiManager.networdRequest(requestType: HttpRequestType.POST, apiUrl: ApiManager.updateExam, inputParam: param) { (jsonResponse, error, success) in
+            self.stopAnimating()
+            if success {
+                if let response = jsonResponse {
+                    let obj = UpdateExamModel(response: response)
                     DispatchQueue.main.async {
                         self.selectClassTableView.reloadData()
                        self.tabBarController?.selectedIndex = 0
-                      //  self.pushToDeshboardVC()
-
-                    }
-                    
-                } else {
-                    DispatchQueue.main.async {
-                        self.displayAlert(with: "Error", message: obj.msg, buttons: ["ok"]) { (str) in
-                            
-                        }
                     }
                 }
-                    
-                        print(json)
-                        
-                    }catch {
-                    
-                    }
-                    
-            
-        }.resume()
+            }
+        }
     }
     
 }

@@ -19,7 +19,7 @@ enum UserKeys: String {
     case isLoggedIn
 }
 extension UserDefaults {
-    class func saveUserVales(user: LoginModel?)  {
+    class func saveUserVales(user: LoginModel?, isLoggedIn: Bool)  {
     UserDefaults.standard.set(user?.name ?? "" ,forKey: UserKeys.name.rawValue)
     UserDefaults.standard.set(user?.email ?? "", forKey: UserKeys.email.rawValue)
     UserDefaults.standard.set(user?.phone ?? "" ,forKey: UserKeys.phone.rawValue)
@@ -28,7 +28,7 @@ extension UserDefaults {
     UserDefaults.standard.set(user?.status ?? "", forKey: UserKeys.status.rawValue)
     UserDefaults.standard.set(user?.coursename ?? "" ,forKey: UserKeys.coursename.rawValue)
     UserDefaults.standard.set(user?.courseid ?? "", forKey: UserKeys.courseid.rawValue)
-    
+        UserDefaults.standard.setValue(isLoggedIn, forKey: UserKeys.isLoggedIn.rawValue)
     }
  
 }

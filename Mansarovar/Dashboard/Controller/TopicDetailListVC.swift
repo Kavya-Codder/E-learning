@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 class TopicDetailListVC: UIViewController {
-
+    
     @IBOutlet weak var lblTopicName: UILabel!
     @IBOutlet weak var detaliTableView: UITableView!
     
@@ -22,17 +22,17 @@ class TopicDetailListVC: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
         
         APICallingTogetallTopicCoursesList()
-
+        
         detaliTableView.delegate = self
         detaliTableView.dataSource = self
         detaliTableView.register(UINib(nibName: TopicDetailsTVC.identifier, bundle: nil), forCellReuseIdentifier: TopicDetailsTVC.identifier)
     }
     
     @IBAction func btnBack(_ sender: Any) {
-    self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
-
+    
 }
 
 // Extension
@@ -45,7 +45,7 @@ extension TopicDetailListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = detaliTableView.dequeueReusableCell(withIdentifier: TopicDetailsTVC.identifier, for: indexPath) as! TopicDetailsTVC
-         
+        
         let cObj = courses[indexPath.row]
         cell.lblCourseTitle.text = cObj.title
         cell.lblV_Count.text = "\(cObj.v_count ?? 0) videos"
@@ -54,65 +54,37 @@ extension TopicDetailListVC: UITableViewDelegate, UITableViewDataSource {
         
         let imageUrl = URL(string: cObj.image ?? "")
         cell.imageView?.sd_setImage(with: imageUrl, placeholderImage: UIImage(systemName: "chemistry"))
-           return cell
+        return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = UIStoryboard(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "PlanDetailVC") as! PlanDetailVC
         vc.courseObj = self.courses[indexPath.row]
         //vc.courseId = self.courses[indexPath.row].c_id ?? 0
-       // vc.subName = self.courses[indexPath.row].title ?? ""
+        // vc.subName = self.courses[indexPath.row].title ?? ""
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //MARK:- API calling
     
     func APICallingTogetallTopicCoursesList() {
-        //self.startAnimation()
-        let apiNmae = "https://eteachnow.com/mobile/app/topic-courses-k12"
-        guard let url = URL(string: apiNmae) else {
-            return
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        let userId = UserDefaults.standard.value(forKey: UserKeys.email.rawValue) as? String
-        let param = ["email": userId ?? "", "topicid": subjectInfo?.id ?? "", "instid": 20] as [String : Any]
-        request.addValue("application/json", forHTTPHeaderField: "content-type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: [])
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            //self.stopAnimating()
-              do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed) as! Dictionary<String, Any>
-                
-                let obj = TopicCourseModel(response: json)
-                
-                if obj.status == "200" {
-                    
+        self.startAnimation()
+        let param = ["email": ApiManager.userId ?? "", "topicid": subjectInfo?.id ?? "", "instid": 20] as [String : Any]
+        ApiManager.networdRequest(requestType: HttpRequestType.POST, apiUrl: ApiManager.topic_courses_k12, inputParam: param) { (jsonResponse, error, success) in
+            self.stopAnimating()
+            if success {
+                if let response = jsonResponse {
+                    let obj = TopicCourseModel(response: response)
                     DispatchQueue.main.async {
                         self.courses = obj.courses ?? []
                         self.subjectInfo = obj.topicInfo
                         self.lblTopicName.text = obj.topicInfo?.name ?? ""
-                       
+                        
                         self.detaliTableView.reloadData()
                     }
-                    
-                } else {
-                    DispatchQueue.main.async {
-                        self.displayAlert(with: "Error", message: obj.msg, buttons: ["ok"]) { (str) in
-                            
-                        }
-                    }
                 }
-                    
-                        print(json)
-                        
-                    }catch {
-                    
-                    }
-                    
-            
-        }.resume()
+            }
+        }
     }
-    }
-    
+}
+
 

@@ -10,7 +10,7 @@ import SDWebImage
 
 class DeshboardVC: UIViewController {
     
-   
+    
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var menuBtn: UIButton!
     
@@ -33,10 +33,10 @@ class DeshboardVC: UIViewController {
         initialSetUp()
         deshboardApi()
         
-//        menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
-//        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-//        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-
+        //        menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+        //        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        //        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        
         sliderCollectionView.delegate = self
         sliderCollectionView.dataSource = self
         sliderCollectionView.register(UINib(nibName: SliderImagesCell.identifier, bundle: nil), forCellWithReuseIdentifier: SliderImagesCell.identifier)
@@ -68,7 +68,7 @@ class DeshboardVC: UIViewController {
         // Timer
         
         timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideTonext), userInfo: nil, repeats: true)
-       // sliderPageControl.numberOfPages = slider.count
+        // sliderPageControl.numberOfPages = slider.count
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -108,14 +108,14 @@ class DeshboardVC: UIViewController {
     
     @IBAction func onClickTopBtn(_ sender: Any) {
         self.tabBarController?.selectedIndex = 1
-//        let vc = UIStoryboard(name: "SelectClass", bundle: nil).instantiateViewController(withIdentifier: "SelectClassVC") as! SelectClassVC
-//        navigationController?.pushViewController(vc, animated: true)
+        //        let vc = UIStoryboard(name: "SelectClass", bundle: nil).instantiateViewController(withIdentifier: "SelectClassVC") as! SelectClassVC
+        //        navigationController?.pushViewController(vc, animated: true)
         
     }
-   static func pushToNotificationVC() {
-    
+    static func pushToNotificationVC() {
+        
     }
-
+    
 }
 extension DeshboardVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -132,7 +132,7 @@ extension DeshboardVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == sliderCollectionView {
             let cell = sliderCollectionView.dequeueReusableCell(withReuseIdentifier: SliderImagesCell.identifier, for: indexPath) as! SliderImagesCell
-           // cell.sliderImg.image = UIImage(named: sliderImages[indexPath.row])
+            // cell.sliderImg.image = UIImage(named: sliderImages[indexPath.row])
             let sObj = slider[indexPath.row]
             let imageUrl = URL(string: "https://eteachnow.com/" + sObj)
             cell.sliderImg.sd_setImage(with: imageUrl, placeholderImage: UIImage(systemName: "chemistry"))
@@ -145,12 +145,12 @@ extension DeshboardVC: UICollectionViewDelegate, UICollectionViewDataSource {
             let cell1 = subjectsListCollectionView.dequeueReusableCell(withReuseIdentifier: DeshboardCell.identifier, for: indexPath) as! DeshboardCell
             let subObj = deshboardData[indexPath.row]
             cell1.lblSubName.text = subObj.subject_name
-           // lblTitle.text = subObj.subject_name
+            // lblTitle.text = subObj.subject_name
             cell1.layer.cornerRadius = 15
             cell1.clipsToBounds = true
             return cell1
         }
-    
+        
         return UICollectionViewCell()
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -172,54 +172,31 @@ extension DeshboardVC: UICollectionViewDelegate, UICollectionViewDataSource {
     //MARK:- Api call
     
     // Deshboard api
-
+    
     func deshboardApi() {
-       // self.startAnimation()
-        let apiNmae = "https://eteachnow.com/mobile/app/dashboardk12-test"
-        guard let url = URL(string: apiNmae) else {
-            return
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
+        self.startAnimation()
         let userId = UserDefaults.standard.value(forKey: UserKeys.email.rawValue) as? String
         let param = ["instid": 20, "email": userId ?? ""] as [String : Any]
-        request.addValue("application/json", forHTTPHeaderField: "content-type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: [])
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-           // self.stopAnimating()
-              do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed) as! Dictionary<String, Any>
-                print(json)
-                let obj = DeshboardModel(response: json)
-                if obj.status == "200" {
-                    self.deshboardData = obj.subjects 
+        ApiManager.networdRequest(requestType: HttpRequestType.POST, apiUrl: ApiManager.deshboard, inputParam: param) { (jsonResponse, error, success) in
+            self.stopAnimating()
+            if success {
+                if let response = jsonResponse {
+                    let obj = DeshboardModel(response: response)
+                    self.deshboardData = obj.subjects
                     
                     
                     DispatchQueue.main.async {
                         self.slider = obj.sliders ?? []
-                        self.sliderPageControl.numberOfPages = self.slider.count 
+                        self.sliderPageControl.numberOfPages = self.slider.count
                         self.lblTitle.text = obj.examInfo?.name ?? ""
                         SelectClassVC.selectedExam = obj.examInfo
                         self.subjectsListCollectionView.reloadData()
                         self.sliderCollectionView.reloadData()
                     }
                     
-                } else {
-                    DispatchQueue.main.async {
-                        self.displayAlert(with: "Error", message: obj.msg, buttons: ["ok"]) { (str) in
-                            
-                        }
-                    }
                 }
-                    
-                        print(json)
-                        
-                    }catch {
-                    
-                    }
-                    
-            
-        }.resume()
+            }
+        }
+        
     }
 }

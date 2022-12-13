@@ -15,7 +15,7 @@ enum LoginVCValidation: String {
 }
 
 class LoginVC: UIViewController {
-
+    
     @IBOutlet weak var buttomView: UIView!
     @IBOutlet weak var btnSignIn: UIButton!
     @IBOutlet weak var txtEmail: UITextField!
@@ -29,14 +29,12 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         loginInitialSetUp()
         
-        if (UserDefaults() != nil) {
+        let userDefault = UserDefaults.standard
+        let value = userDefault.bool(forKey: UserKeys.isLoggedIn.rawValue)
+        if value {
             pushToDeshboardVC()
         }
-//        if (users.first?.email ?? "") == (self.txtEmail.text ?? "") {
-//            pushToDeshboardVC()
-//        }
-
-
+        
     }
     
     @IBAction func onClickTxtEmail(_ sender: Any) {
@@ -61,7 +59,7 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func onClickForgotPasswordBtn(_ sender: Any) {
-       pushToForgotPasswordVC()
+        pushToForgotPasswordVC()
     }
     
     
@@ -77,9 +75,9 @@ extension LoginVC {
             return(false, LoginVCValidation.email.rawValue)
             
         } else if !self.isValidEmailAddress(txtEmail.text ?? "") {
-        return (false, LoginVCValidation.vaildEmail.rawValue)
-        
-    } else if (txtPassword.text?.isEmpty ?? false) {
+            return (false, LoginVCValidation.vaildEmail.rawValue)
+            
+        } else if (txtPassword.text?.isEmpty ?? false) {
             return(false, LoginVCValidation.password.rawValue)
         }
         return(true, "")
@@ -114,56 +112,33 @@ extension LoginVC {
     }
     
     //MARK:- Api call
-
+    
     func signIn() {
         self.startAnimation()
-        
-        let apiNmae = "https://eteachnow.com/mobile/app/user/login"
-        guard let url = URL(string: apiNmae) else {
-            return
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
         let param = ["instid": 20, "email": txtEmail.text ?? "", "password": txtPassword.text ?? ""] as [String : Any]
-        request.addValue("application/json", forHTTPHeaderField: "content-type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: [])
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
+        ApiManager.networdRequest(requestType: HttpRequestType.POST, apiUrl: ApiManager.logIn, inputParam: param) { (jsonResponse, error, success) in
             self.stopAnimating()
-              do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed) as! Dictionary<String, Any>
-                
-                let obj = LoginModel(response: json)
-                if obj.status == "200" {
-                    
+            if success  { // success == true
+                if let response = jsonResponse {
+                    let obj = LoginModel(response: response)
                     DispatchQueue.main.async {
                         
                         self.displayAlert(with: "Success", message: "Login Successfully", buttons: ["ok"]) { (str) in
-                           
-                            UserDefaults.saveUserVales(user: obj )
-                                self.pushToDeshboardVC()
-                            
-                        }
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        self.displayAlert(with: "Error", message: obj.msg, buttons: ["ok"]) { (str) in
+                            UserDefaults.saveUserVales(user: obj, isLoggedIn: true )
+                            self.pushToDeshboardVC()
                             
                         }
                     }
                 }
-                    
-                        print(json)
-                        
-                    }catch {
-                    
-                    }
-                    
+                
+            }
             
-        }.resume()
+        }
+        
+       
     }
     
 }
-    
+
 
 

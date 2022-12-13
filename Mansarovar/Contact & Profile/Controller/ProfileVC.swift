@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ProfileVC: UIViewController {
     
     @IBOutlet weak var lblPName: UILabel!
     @IBOutlet weak var imgProfile: UIImageView!
@@ -19,13 +19,10 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var viewContainer: UIView!
     
     var arrProfile: [UserModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetUp()
-
-        profileTableView.dataSource = self
-        profileTableView.delegate = self
-        profileTableView.register(UINib(nibName: ProfileTVC.identifier, bundle: nil), forCellReuseIdentifier: ProfileTVC.identifier)
         
         if let name = UserDefaults.standard.value(forKey: UserKeys.name.rawValue) as? String {
             lblPName.text = name.capitalized
@@ -40,18 +37,5 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         imgProfile.layer.cornerRadius = 37.5
         
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = profileTableView.dequeueReusableCell(withIdentifier: ProfileTVC.identifier, for: indexPath) as! ProfileTVC
-        
-        
-        return cell
-    }
-    
-
-
-
 }
