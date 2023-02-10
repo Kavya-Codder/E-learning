@@ -9,8 +9,7 @@ target 'Mansarovar' do
 
    pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git', :tag => '4.8.0'
    pod 'SDWebImage', '5.12.6'
-
-
+   pod 'SideMenu'
   target 'MansarovarTests' do
     inherit! :search_paths
     # Pods for testing

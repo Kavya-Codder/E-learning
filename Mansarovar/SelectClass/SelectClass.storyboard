@@ -32,6 +32,9 @@
                                             <constraint firstAttribute="width" constant="25" id="Yxs-vM-BCP"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="blueMenu"/>
+                                        <connections>
+                                            <action selector="onClickMenuBtn:" destination="LHS-6j-fmt" eventType="touchUpInside" id="Ker-QB-GRo"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWt-yc-Pzl">
                                         <rect key="frame" x="66" y="50" width="298" height="29.5"/>
@@ -46,6 +49,9 @@
                                             <constraint firstAttribute="height" constant="25" id="XvS-7Z-4cF"/>
                                         </constraints>
                                         <state key="normal" image="bell"/>
+                                        <connections>
+                                            <action selector="onClickNotificationBtn:" destination="LHS-6j-fmt" eventType="touchUpInside" id="aj7-vY-7Ji"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -114,21 +120,6 @@
             </objects>
             <point key="canvasLocation" x="-336.23188405797106" y="4.6875"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="LB3-vQ-BAA">
-            <objects>
-                <viewController id="NGM-aT-rB6" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Iiy-co-sIb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="MFP-nd-gWN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="To4-6i-9pT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="476.81159420289856" y="21.428571428571427"/>
-        </scene>
         <!--Select Class-->
         <scene sceneID="Czo-Hs-Zv4">
             <objects>
@@ -162,9 +153,6 @@
         <namedColor name="loginButton">
             <color red="0.086274509803921567" green="0.17254901960784313" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

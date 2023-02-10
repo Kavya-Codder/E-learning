@@ -11,7 +11,9 @@ class PlanEbookTVC: UITableViewCell {
 static let identifier = "PlanEbookTVC"
     
     @IBOutlet weak var lblBook: UILabel!
+    @IBOutlet weak var lblMarks: UILabel!
     
+    @IBOutlet weak var lblNoOfQues: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

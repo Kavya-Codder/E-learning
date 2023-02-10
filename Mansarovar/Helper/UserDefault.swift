@@ -29,6 +29,9 @@ extension UserDefaults {
     UserDefaults.standard.set(user?.coursename ?? "" ,forKey: UserKeys.coursename.rawValue)
     UserDefaults.standard.set(user?.courseid ?? "", forKey: UserKeys.courseid.rawValue)
         UserDefaults.standard.setValue(isLoggedIn, forKey: UserKeys.isLoggedIn.rawValue)
+        
     }
  
 }
+
+

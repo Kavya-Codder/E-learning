@@ -14,9 +14,10 @@ class ProfileVC: UIViewController {
     
     @IBOutlet weak var lblEmail: UILabel!
     
-    @IBOutlet weak var profileTableView: UITableView!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblEmailID: UILabel!
+    @IBOutlet weak var lblPhone: UILabel!
     
-    @IBOutlet weak var viewContainer: UIView!
     
     var arrProfile: [UserModel] = []
     
@@ -26,9 +27,14 @@ class ProfileVC: UIViewController {
         
         if let name = UserDefaults.standard.value(forKey: UserKeys.name.rawValue) as? String {
             lblPName.text = name.capitalized
+            lblName.text = name
         }
         if let email = UserDefaults.standard.value(forKey: UserKeys.email.rawValue) as? String {
-            lblEmail.text = email.capitalized
+            lblEmail.text = email
+            lblEmailID.text = email
+        }
+        if let phone = UserDefaults.standard.value(forKey: UserKeys.phone.rawValue) as? String {
+            lblPhone.text = phone
         }
     }
     

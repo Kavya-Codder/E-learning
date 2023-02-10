@@ -73,7 +73,9 @@ class SignUpVC: UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
         navigationController?.pushViewController(vc, animated: true)
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = true
+    }
     
 }
 //MARK:- Custom FUnction

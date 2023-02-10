@@ -5,7 +5,7 @@
 //  Created by Sunil Developer on 06/12/22.
 //
 
-struct SubjectModel  {
+struct SubjectModel : Codable  {
     var subject_id : Int?
     var parent_id : Int?
     var subject_name : String?

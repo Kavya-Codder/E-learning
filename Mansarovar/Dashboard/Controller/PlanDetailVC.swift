@@ -18,7 +18,7 @@ class PlanDetailVC: UIViewController {
     var price = 0
     //var selectedTest:Tests?
     var arrVideo: [Videos] = []
-    var arrTest: [String] = []
+    var arrTest: [Tests] = []
     var arrBook: [Ebooks] = []
     var courseObj: CourseModel?
     var subName = ""
@@ -76,6 +76,9 @@ extension PlanDetailVC: UITableViewDelegate, UITableViewDataSource {
         } else if segment.selectedSegmentIndex == 1 {
             let cell1 = tableView.dequeueReusableCell(withIdentifier: PlanTestTVC.identifier, for: indexPath) as! PlanTestTVC
             let tObj = arrTest[indexPath.row]
+            cell1.lbltest.text = tObj.title
+            cell1.lblQuestion.text = "Number Of Ques: \(tObj.ques_count ?? 0)"
+            cell1.lblMarks.text = "Marks: \(tObj.pos_mark ?? 0)"
             
             return cell1
             
@@ -91,8 +94,14 @@ extension PlanDetailVC: UITableViewDelegate, UITableViewDataSource {
         {
             let vc = UIStoryboard(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "ShowVideoVC") as! ShowVideoVC
             vc.vData = arrVideo[indexPath.row]
+            vc.subjest = lblTitle.text ?? ""
             self.navigationController?.pushViewController(vc, animated: true)
+            
+        } else if segment.selectedSegmentIndex == 1 {
+            let testVC = UIStoryboard(name: "Dashboard", bundle: nil).instantiateViewController(withIdentifier: "TestVC") as! TestVC
+            self.navigationController?.pushViewController(testVC, animated: true)
         }
+        
     }
     
     
@@ -103,7 +112,7 @@ extension PlanDetailVC: UITableViewDelegate, UITableViewDataSource {
             //        let url = ApiManager.shared.Base_Url+(subjectInfo!.image ?? "")
             //        imgBanner.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "demo"))
             
-            lblTitle.text = subName
+            lblTitle.text = subjectInfo?.name
             price = subjectInfo!.price ?? 0
         }
     }
@@ -114,7 +123,7 @@ extension PlanDetailVC: UITableViewDelegate, UITableViewDataSource {
     
     func courseDetailsApi() {
         self.startAnimation()
-        let param = ["instid": 20, "email": ApiManager.userId ?? "", "courseid": courseObj?.c_id ?? 0] as [String : Any]
+        let param = ["instid": 20, "email": ApiManager.userEmail ?? "", "courseid": courseObj?.c_id ?? 0] as [String : Any]
         ApiManager.networdRequest(requestType: HttpRequestType.POST, apiUrl: ApiManager.courseDetails, inputParam: param) { (jsonResponse, error, success) in
             self.stopAnimating()
             if success {
@@ -122,7 +131,7 @@ extension PlanDetailVC: UITableViewDelegate, UITableViewDataSource {
                     let obj = CourseBaseModel(response: response)
                     DispatchQueue.main.async {
                         self.arrVideo = obj.videos
-                        self.arrTest = obj.tests ?? []
+                        self.arrTest = obj.tests
                         self.arrBook = obj.ebooks
                         
                         self.tableView.reloadData()

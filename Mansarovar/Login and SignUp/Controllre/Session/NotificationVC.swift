@@ -24,6 +24,10 @@ class NotificationVC: UIViewController {
         notificationTableView.register(UINib(nibName: NotificationCell.identifier, bundle: nil), forCellReuseIdentifier: NotificationCell.identifier)
     }
     
+    @IBAction func onClickBackBtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 // Extension
@@ -46,8 +50,8 @@ extension NotificationVC: UITableViewDelegate, UITableViewDataSource {
    // MARK:-  Api Call
 
     func notificationApi() {
-        startAnimating()
-        let param = ["instid": 20, "email": "sunil12@gmail.com"] as [String : Any]
+        self.startAnimation()
+        let param = ["instid": 20, "email": ApiManager.userEmail ?? ""] as [String : Any]
         ApiManager.networdRequest(requestType: HttpRequestType.POST, apiUrl: ApiManager.notification, inputParam: param) { (jsonResponse, reeor, success) in
             self.stopAnimating()
             if success {

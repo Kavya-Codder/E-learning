@@ -893,6 +893,9 @@
                                             <constraint firstAttribute="height" constant="20" id="qaV-2q-HZV"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="left-arrow (3)"/>
+                                        <connections>
+                                            <action selector="onClickBackBtn:" destination="OCy-9W-y9f" eventType="touchUpInside" id="sJT-Qo-gxd"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxs-43-7Wu">
                                         <rect key="frame" x="50" y="50" width="324" height="29.5"/>
@@ -944,7 +947,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NW2-nF-VIs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1094" y="-884"/>
+            <point key="canvasLocation" x="883" y="-1029"/>
         </scene>
     </scenes>
     <resources>

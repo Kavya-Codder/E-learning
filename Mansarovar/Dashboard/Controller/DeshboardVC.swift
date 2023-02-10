@@ -7,19 +7,15 @@
 
 import UIKit
 import SDWebImage
+import SideMenu
 
 class DeshboardVC: UIViewController {
-    
-    
+   
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var menuBtn: UIButton!
-    
     @IBOutlet weak var sliderCollectionView: UICollectionView!
-    
     @IBOutlet weak var sliderPageControl: UIPageControl!
-    
     @IBOutlet weak var subjectsListCollectionView: UICollectionView!
-    
     @IBOutlet weak var topView: UIView!
     
     var slider: [String] = []
@@ -27,15 +23,27 @@ class DeshboardVC: UIViewController {
     var lblSubTitle: ExamModel?
     var timer: Timer?
     var deshboardData: [SubjectModel] = []
+    
+    var blurView = UIView()
+    var leftView = UIView()
+    var leftBlurView = UIView()
+    var controller = SideMenuVC()
+    
+    var menu: SideMenuNavigationController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initialSetUp()
         deshboardApi()
         
-        //        menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
-        //        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        //        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        menu = SideMenuNavigationController(rootViewController: ListController())
+        menu?.leftSide = true
+        SideMenuManager.default.addPanGestureToPresent(toView: view)
+        SideMenuManager.default.leftMenuNavigationController = menu
+        menu?.setNavigationBarHidden(true, animated: true)
+        
+        
         
         sliderCollectionView.delegate = self
         sliderCollectionView.dataSource = self
@@ -89,15 +97,11 @@ class DeshboardVC: UIViewController {
         sliderCollectionView.scrollToItem(at: IndexPath(item: currentCelIndex, section: 0), at: .right, animated: true)
     }
     
-    @IBAction func onClickLogOutBtn(_ sender: Any) {
-        let viewControllers: [UIViewController] = self.navigationController!.viewControllers
-        for aViewController in viewControllers {
-            if aViewController is LoginVC {
-                UserDefaults.standard.set(false, forKey: UserKeys.email.rawValue)
-                self.navigationController!.popToViewController(aViewController, animated: true)
-            }
+    
+    @IBAction func onClickMenuBtn(_ sender: Any) {
+        present(menu!, animated: true, completion: nil)
+        
         }
-    }
     
     
     @IBAction func onClicknotificationBtn(_ sender: Any) {
@@ -175,8 +179,7 @@ extension DeshboardVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func deshboardApi() {
         self.startAnimation()
-        let userId = UserDefaults.standard.value(forKey: UserKeys.email.rawValue) as? String
-        let param = ["instid": 20, "email": userId ?? ""] as [String : Any]
+        let param = ["instid": 20, "email": ApiManager.userEmail ?? ""] as [String : Any]
         ApiManager.networdRequest(requestType: HttpRequestType.POST, apiUrl: ApiManager.deshboard, inputParam: param) { (jsonResponse, error, success) in
             self.stopAnimating()
             if success {
@@ -199,4 +202,8 @@ extension DeshboardVC: UICollectionViewDelegate, UICollectionViewDataSource {
         }
         
     }
+    
 }
+
+
+

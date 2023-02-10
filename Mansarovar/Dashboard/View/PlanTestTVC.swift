@@ -11,7 +11,8 @@ class PlanTestTVC: UITableViewCell {
     static let identifier = "PlanTestTVC"
     
     @IBOutlet weak var lbltest: UILabel!
-    
+    @IBOutlet weak var lblMarks: UILabel!
+    @IBOutlet weak var lblQuestion: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

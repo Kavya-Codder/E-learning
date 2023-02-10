@@ -13,7 +13,7 @@ struct CourseBaseModel {
     var show_pay_btn : Int?
     var course : Course?
     var videos : [Videos] = []
-    var tests : [String]?
+    var tests : [Tests] = []
     var ebooks : [Ebooks] = []
     var paidStatus : Int?
     var confs : [String]?
@@ -41,7 +41,13 @@ struct CourseBaseModel {
             }
         }
         
-        self.tests = response["tests"] as? [String]
+        if let tData = response["tests"] as? [[String: Any]] {
+            tData.forEach { responseDic in
+                let testData = Tests(response: responseDic)
+                tests.append(testData)
+                
+            }
+        }
         self.paidStatus = response["paidStatus"] as? Int
         self.confs = response["confs"] as? [String]
         self.free_videos = response["free_videos"] as? Int

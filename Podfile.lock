@@ -5,14 +5,17 @@ PODS:
   - SDWebImage (5.12.6):
     - SDWebImage/Core (= 5.12.6)
   - SDWebImage/Core (5.12.6)
+  - SideMenu (6.5.0)
 
 DEPENDENCIES:
   - NVActivityIndicatorView (from `https://github.com/ninjaprox/NVActivityIndicatorView.git`, tag `4.8.0`)
   - SDWebImage (= 5.12.6)
+  - SideMenu
 
 SPEC REPOS:
   trunk:
     - SDWebImage
+    - SideMenu
 
 EXTERNAL SOURCES:
   NVActivityIndicatorView:
@@ -27,7 +30,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   NVActivityIndicatorView: 24b713d5140767dc43097cd9d5ff719ff0660bdc
   SDWebImage: a47aea9e3d8816015db4e523daff50cfd294499d
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
 
-PODFILE CHECKSUM: 774936f39b4e1cebb5804547153c9a8f0a4bffbc
+PODFILE CHECKSUM: 9267926e52b95e8ad849cba2c90e89ec893d6638
 
 COCOAPODS: 1.11.3

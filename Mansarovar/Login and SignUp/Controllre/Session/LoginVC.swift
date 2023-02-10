@@ -29,6 +29,8 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         loginInitialSetUp()
         
+        tabBarController?.tabBar.isHidden = true
+        
         let userDefault = UserDefaults.standard
         let value = userDefault.bool(forKey: UserKeys.isLoggedIn.rawValue)
         if value {
@@ -37,6 +39,9 @@ class LoginVC: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = true
+    }
     @IBAction func onClickTxtEmail(_ sender: Any) {
         lblEmail.isHidden = false
     }

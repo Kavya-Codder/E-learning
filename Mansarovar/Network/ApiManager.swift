@@ -34,7 +34,11 @@ class ApiManager {
     static let updateExam = ApiManager.baseUrl + "update-exam"
     static let allEducator = ApiManager.baseUrl + "get-educator-list"
     static let allExams = ApiManager.baseUrl + "all-exams"
-    static let userId = UserDefaults.standard.value(forKey: UserKeys.email.rawValue) as? String
+    static let allTestSeries = ApiManager.baseUrl + "all-testseries-global"
+    static let commentList = ApiManager.baseUrl + "video/get-top-comments-json"
+    static let addComment = ApiManager.baseUrl + "video/add-comment"
+    
+    static var userEmail = UserDefaults.standard.value(forKey: UserKeys.email.rawValue) as? String
     
   static  func networdRequest(requestType: HttpRequestType, apiUrl: String, inputParam: [String: Any], complition: @escaping ((Dictionary<String, Any>)?, Error?, Bool) -> Void) {
         // self.startAnimation()
@@ -50,10 +54,16 @@ class ApiManager {
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             //  self.stopAnimating()
             do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed) as! Dictionary<String, Any>
-                complition(json, nil, true)
                 
-                print(json)
+                if let jsonData = data {
+                    let json = try JSONSerialization.jsonObject(with: jsonData, options: .fragmentsAllowed) as! Dictionary<String, Any>
+                    complition(json, nil, true)
+                    
+                    print(json)
+                } else {
+                    complition(nil, nil, false)
+                }
+                
                 
             }catch (let error ) {
                 complition(nil, error, false)

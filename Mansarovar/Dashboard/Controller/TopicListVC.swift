@@ -63,7 +63,7 @@ extension TopicListVC: UITableViewDelegate, UITableViewDataSource {
     
     func apiTopic() {
         self.startAnimation()
-        let param = ["email": ApiManager.userId ?? "", "subid": self.subid, "instid": 20] as [String : Any]
+        let param = ["email": ApiManager.userEmail ?? "", "subid": self.subid, "instid": 20] as [String : Any]
         ApiManager.networdRequest(requestType: HttpRequestType.POST, apiUrl: ApiManager.get_subject_topic, inputParam: param) { (jsonResponse, error, success) in
             self.stopAnimating()
             if success {

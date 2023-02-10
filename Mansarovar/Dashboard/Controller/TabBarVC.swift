@@ -8,7 +8,8 @@
 import UIKit
 
 class TabBarVC: UITabBarController {
-
+   
+    var name: AnyObject = 15 as AnyObject
     override func viewDidLoad() {
         super.viewDidLoad()
          initialStUp()
@@ -18,7 +19,7 @@ class TabBarVC: UITabBarController {
     func initialStUp() {
         tabBar.layer.masksToBounds = true
         tabBar.isTranslucent = true
-        tabBar.layer.cornerRadius = 15
+        tabBar.layer.cornerRadius = 10
         
     }
 
@@ -35,7 +36,7 @@ class TabBarVC: UITabBarController {
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        //self.annimationWhenSelectItem(item)
+       // self.annimationWhenSelectItem(item: <#T##UITabBar#>)
     }
     
     func annimationWhenSelectItem(item: UITabBar) {

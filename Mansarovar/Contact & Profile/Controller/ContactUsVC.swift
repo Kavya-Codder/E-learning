@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SideMenu
 class ContactUsVC: UIViewController {
 
     @IBOutlet weak var viewContainer: UIView!
@@ -19,14 +19,25 @@ class ContactUsVC: UIViewController {
     
     @IBOutlet weak var btnSendMessage: UIButton!
     
+    var menu: SideMenuNavigationController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         initialSetup()
+        
+        menu = SideMenuNavigationController(rootViewController: ListController())
+        menu?.leftSide = true
+        SideMenuManager.default.addPanGestureToPresent(toView: view)
+        SideMenuManager.default.leftMenuNavigationController = menu
+        menu?.setNavigationBarHidden(true, animated: true)
     }
     
 
-
+    @IBAction func onClickMenuBtn(_ sender: Any) {
+        present(menu!, animated: true, completion: nil)
+    }
+    
 }
 extension ContactUsVC {
     

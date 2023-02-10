@@ -18,71 +18,74 @@ class ShowVideoVC: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var sendBtn: UIButton!
     
+    @IBOutlet weak var messageView: UIView!
     var commentData: [Comments] = []
     var vData: Videos?
-    
+    var subjest = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        initialSetup()
+        getCommentsList()
+        
         tableView.register(UINib(nibName: ShowVideoTVC.identifier, bundle: nil), forCellReuseIdentifier: ShowVideoTVC.identifier)
         
         lblSubject.text = vData?.sub_name ?? ""
-        webServiceCommintsApi()
+        //webServiceCommintsApi()
         
     }
     
-
-
+    @IBAction func onClickBackBtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }
 // Extension
 
 extension ShowVideoVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return commentData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ShowVideoTVC.identifier, for: indexPath) as! ShowVideoTVC
+        let cObj = commentData[indexPath.row]
+        cell.lblName.text = cObj.name
+        cell.lblMsg.text = cObj.message
         return cell
+    }
+    
+    func initialSetup() {
+        sendBtn.clipsToBounds = true
+        sendBtn.layer.cornerRadius = 25
+        
+        messageView.clipsToBounds = true
+        messageView.layer.cornerRadius = 15
+        
+        
+        
     }
     
     //MARK:- Api call
     
+    
     // getCommints
 
-    func webServiceCommintsApi() {
+    func getCommentsList() {
        // self.startAnimation()
-        let apiNmae = "https://eteachnow.com/mobile/app/video/get-top-comments"
-        guard let url = URL(string: apiNmae) else {
-            return
-        }
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        let userId = UserDefaults.standard.value(forKey: UserKeys.email.rawValue) as? String
-        let param = ["instid": 20, "email": userId ?? ""] as [String : Any]
-        request.addValue("application/json", forHTTPHeaderField: "content-type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.httpBody = try? JSONSerialization.data(withJSONObject: param, options: [])
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-           // self.stopAnimating()
-            do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed) as! NSArray
-                if let data = json as? [[String: AnyObject]] {
-                    data.forEach { responseDic in
-                        let comment = Comments(response: responseDic)
-                        self.commentData.append(comment)
+        let param = ["instid": 20, "email": ApiManager.userEmail ?? "", "videoid": 15696] as [String : Any]
+        ApiManager.networdRequest(requestType: HttpRequestType.POST, apiUrl: ApiManager.commentList, inputParam: param) { (jsonResponse, error, success) in
+            if success {
+                if let response = jsonResponse {
+                    let obj = CommentsBaseModel(response: response)
+                    DispatchQueue.main.async {
+                        self.commentData = obj.comments ?? []
+                        
+                        
                     }
-                 }
-                DispatchQueue.main.async {
-                    
-                    
                 }
-                print(json)
-            } catch {
-                
             }
-        }.resume()
+        }
     }
     
 }

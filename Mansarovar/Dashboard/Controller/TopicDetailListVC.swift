@@ -61,6 +61,7 @@ extension TopicDetailListVC: UITableViewDelegate, UITableViewDataSource {
         vc.courseObj = self.courses[indexPath.row]
         //vc.courseId = self.courses[indexPath.row].c_id ?? 0
         // vc.subName = self.courses[indexPath.row].title ?? ""
+        vc.subjectInfo = self.subjectInfo
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -68,7 +69,7 @@ extension TopicDetailListVC: UITableViewDelegate, UITableViewDataSource {
     
     func APICallingTogetallTopicCoursesList() {
         self.startAnimation()
-        let param = ["email": ApiManager.userId ?? "", "topicid": subjectInfo?.id ?? "", "instid": 20] as [String : Any]
+        let param = ["email": ApiManager.userEmail ?? "", "topicid": subjectInfo?.id ?? "", "instid": 20] as [String : Any]
         ApiManager.networdRequest(requestType: HttpRequestType.POST, apiUrl: ApiManager.topic_courses_k12, inputParam: param) { (jsonResponse, error, success) in
             self.stopAnimating()
             if success {
